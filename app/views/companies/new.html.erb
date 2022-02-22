@@ -1,20 +1,23 @@
+
+
 <div class="container">
-  <div class="small-container">
-    <h1>Add a company for <%= @company.name %></h1>
-    <p><%= @company.description %></p>
-      <%= simple_form_for [@company] do |f| %>
-      <%= f.input :company_name, html5: true  %>
-      <%= f.input :company_description, html5: true  %>
-      <%= f.input :company_type, html5: true  %>
-      <%= f.input :company_size, html5: true  %>
-      <%= f.input :hq_location, html5: true  %>
-      <%= f.input :women_c_level, html5: true  %>
-      <%= f.input :men_c_level, html5: true  %>
-      <%= f.input :women_mid_senior_level, html5: true  %>
-      <%= f.input :men_mid_senior_level, html5: true  %>
-      <%= f.input :women_junior_level, html5: true  %>
-      <%= f.input :men_junior_level, html5: true  %>
-      <%= f.button :submit, class: "btn btn-primary" %>
-    <% end %>
-  </div>
+  <div class="row justify-content-center">
+    <div class="col-6">
+  <%= simple_form_for [@user, @company] do |f| %>
+    <%= f.input :company_name %>
+    <%= f.input :company_description %>
+    <%= f.input :hq_location %>
+    <%= f.input :company_size %>
+    <%= f.input :type_of_company %>
+    <%= f.input :women_c_level %>
+    <%= f.input :men_c_level %>
+    <%= f.input :women_mid_senior_level %>
+    <%= f.input :men_mid_senior_level %>
+    <%= f.input :women_junior_level %>
+    <%= f.input :men_junior_level %>
+    <%= f.input :photo %>
+    <%= f.submit "Submit", class: "btn btn-primary btn-lg btn-block" %>
+  <% end %>
 </div>
+  </div>
+    </div>

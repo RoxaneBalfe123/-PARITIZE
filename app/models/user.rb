@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :companies
   has_many :bookmarks, dependent: :destroy
 
-  validates :name, :email, uniqueness: true, presence: true
+  validates :email, uniqueness: true, presence: true
 end
