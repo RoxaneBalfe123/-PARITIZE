@@ -1,4 +1,9 @@
 class CompaniesController < ApplicationController
+
+  def show
+    @company = Company.find(params[:id])
+  end
+
   def new
     @company = Company.new
   end
@@ -20,4 +25,5 @@ class CompaniesController < ApplicationController
                   :men_c_level, :women_mid_senior_level, :men_mid_senior_level, :women_junior_level, :men_junior_level,
                   :photo)
   end
+
 end
