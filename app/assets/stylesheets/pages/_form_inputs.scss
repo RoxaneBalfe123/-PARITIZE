@@ -1,0 +1,29 @@
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: rgb(249, 171, 64);
+  width: 100%;
+  }
+
+.whole-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  // background-color: rgb(249, 171, 64);
+
+}
