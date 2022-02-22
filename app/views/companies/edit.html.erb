@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="small-container">
+    <h1>Add a booking for <%= @car.brand %> <%= @car.model %></h1>
+    <p><%= @car.description %></p>
+      <%= simple_form_for [@company] do |f| %>
+      <%= f.input :company_name, html5: true  %>
+      <%= f.input :company_description, html5: true  %>
+      <%= f.input :company_type, html5: true  %>
+      <%= f.input :company_size, html5: true  %>
+      <%= f.input :hq_location, html5: true  %>
+      <%= f.input :women_c_level, html5: true  %>
+      <%= f.input :men_c_level, html5: true  %>
+      <%= f.input :women_mid_senior_level, html5: true  %>
+      <%= f.input :men_mid_senior_level, html5: true  %>
+      <%= f.input :women_junior_level, html5: true  %>
+      <%= f.input :men_junior_level, html5: true  %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

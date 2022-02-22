@@ -1,0 +1,23 @@
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+  <%= simple_form_for [@user, @company] do |f| %>
+    <%= f.input :company_name %>
+    <%= f.input :company_description %>
+    <%= f.input :hq_location %>
+    <%= f.input :company_size %>
+    <%= f.input :type_of_company %>
+    <%= f.input :women_c_level %>
+    <%= f.input :men_c_level %>
+    <%= f.input :women_mid_senior_level %>
+    <%= f.input :men_mid_senior_level %>
+    <%= f.input :women_junior_level %>
+    <%= f.input :men_junior_level %>
+    <%= f.input :photo %>
+    <%= f.submit "Submit", class: "btn btn-primary btn-lg btn-block" %>
+  <% end %>
+</div>
+  </div>
+    </div>
