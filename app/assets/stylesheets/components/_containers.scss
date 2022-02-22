@@ -1,0 +1,30 @@
+h1 {
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+}
+
+
+.cards {
+  flex-grow: 1;
+}
+
+.cards-container {
+  width: 100%;
+  padding: 16px;
+}
+
+.main-container-first {
+  width: 63%;
+  text-align: center;
+  margin-top: 16px;
+}
+
+
+.main-container-second {
+  margin-top: 24px;
+  margin-right: 16px;
+  width: 36%;
+}
