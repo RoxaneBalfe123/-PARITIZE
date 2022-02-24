@@ -6,13 +6,17 @@
     <p><%= @company.type_of_company %></p>
     <p>Number of employees:<%= @company.company_size %></p>
     <p>Location: <%= @company.hq_location %></p>
+          <%= link_to 'Delete',
+                    company_path(@company),
+                    method: :delete,
+                    class: "btn btn-danger",
+                    data: { confirm: "Delete '#{@company.company_name}'?"} %>
   </div>
    <%# <div class="company-ratings"> %>
     <%# <p><%= @company.company_description %></p>
     <%# <p><%= @gender_rating.c_rating %></p>
     <%# <p><%= @gender_rating.mid_rating %></p>
-    <%# <p><%= @gender_rating.junior_rating %></p> 
+    <%# <p><%= @gender_rating.junior_rating %></p>
   <%# </div> %>
 
 </div>
-
