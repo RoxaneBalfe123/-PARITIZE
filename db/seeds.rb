@@ -34,8 +34,6 @@ user = User.create!(
   # confirm_password: "123456"
 )
 
-
-
 file = URI.open('https://1000logos.net/gmail-logo/')
   astra_zeneca = Company.new(
     company_name: "AstraZeneca",
