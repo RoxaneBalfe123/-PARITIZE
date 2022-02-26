@@ -1,8 +1,32 @@
 
-
-<h1>Best Rated Companies</h1>
-
+<div class="companies_container">
+<h1>List of comapnies</h1>
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <li><button class="dropdown-item" type="button">Action</button></li>
+    <li><button class="dropdown-item" type="button">Another action</button></li>
+    <li><button class="dropdown-item" type="button">Something else here</button></li>
+  </ul>
+</div>
 <% @companies.each do | company | %>
-<%= company.company_name %>
-<hr>
-<% end %>
+<div class="company_card">
+<div class="company_card_info">
+<%= cl_image_tag company.photo.key, class: "company_card_img" %>
+<div class="card-details">
+<h3><%= company.company_name %></h3>
+<p><%= company.hq_location %></p>
+      </div>
+      </div>
+<div class="rating">
+<div class="rating_score">
+<h4>100%</h4>
+</div>
+<i class="fas fa-heart"></i>
+</div>
+</div>
+    <% end %>
+ </div>
+</div>
