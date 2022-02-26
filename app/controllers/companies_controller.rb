@@ -19,10 +19,21 @@ class CompaniesController < ApplicationController
 
   def create
     @company = Company.new(company_params)
+    @company.user = current_user
     if @company.save
-      redirect_to company_path(@company)
+      average_rating = (company_params[:women_c_level].to_i +
+      company_params[:women_mid_senior_level].to_i + company_params[:women_junior_level].to_i).to_f / 3
+      @gender_rating = GenderRating.new(c_rating: company_params[:women_c_level],
+        mid_rating: company_params[:women_mid_senior_level],
+        junior_rating: company_params[:women_junior_level],
+        average_rating: average_rating)
+      @gender_rating.company = @company
+      @gender_rating.save
+      redirect_to gender_rating_path(@gender_rating)
+      flash[:notice] = "Thanks for submitting"
     else
       render :new
+      flash[:notice] = "This is not working"
     end
   end
 

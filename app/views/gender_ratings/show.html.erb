@@ -1,0 +1,44 @@
+<div class="wrapper">
+  <div class ="company-details">
+
+  <h1> Company X’s total score: </h1>
+  <% if @gender_rating.average_rating >= 50 %>
+    <div class="circle-green"></div>
+  <% elsif @gender_rating.average_rating <= 29 %>
+    <div class="circle-red"></div>
+  <% else @gender_rating.average_rating %>
+    <div class="circle-orange"></div>
+  <% end %>
+
+    <h2>c_rating : </h2>
+  <% if @gender_rating.c_rating >= 50 %>
+    <div class="circle-green"></div>
+  <% elsif @gender_rating.c_rating <= 29 %>
+   <div class="circle-red"></div>
+  <% else @gender_rating.c_rating %>
+    <div class="circle-orange"></div>
+  <% end %>
+
+    <h2>mid_rating : </h2>
+  <% if @gender_rating.mid_rating >= 50 %>
+    <div class="circle-green"></div>
+  <% elsif @gender_rating.mid_rating <= 29 %>
+    <div class="circle-red"></div>
+  <% else @gender_rating.mid_rating %>
+    <div class="circle-orange"></div>
+  <% end %>
+
+      <h2>junior_rating : </h2>
+  <% if @gender_rating.junior_rating >= 50 %>
+    <div class="circle-green"></div>
+  <% elsif @gender_rating.junior_rating <= 29 %>
+    <div class="circle-red"></div>
+  <% else @gender_rating.junior_rating %>
+    <div class="circle-orange"></div>
+  <% end %>
+
+  </div>
+
+  <h2>Read more on how to improve</h2>
+  <h3> Resource</h3>
+</div>
