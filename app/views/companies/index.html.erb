@@ -1,6 +1,16 @@
 <div class="companies_container">
-<div class="companies_banner">
 <h1>List of comapnies</h1>
+<div class="dropdown">
+   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Select company type
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Science</a></li>
+    <li><a class="dropdown-item" href="#">Technology</a></li>
+    <li><a class="dropdown-item" href="#">Engineering</a></li>
+    <li><a class="dropdown-item" href="#">Math</a></li>
+  </ul>
+</div>
 <% @companies.each do | company | %>
 <div class="company_card">
 <div class="company_card_info">
