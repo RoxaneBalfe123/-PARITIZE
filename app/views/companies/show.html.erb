@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p>
 
 <div class="wrapper">
   <div class ="company-details">
@@ -11,7 +12,7 @@
                     method: :delete,
                     class: "btn btn-danger",
                     data: { confirm: "Delete '#{@company.company_name}'?"} %>
-  <%= link_to "Edit", edit_company_path, class: "btn btn-secondary" %>
+    <%= link_to "Edit", edit_company_path(id: @company.id), class: "btn btn-secondary" %>
   </div>
    <%# <div class="company-ratings"> %>
     <%# <p><%= @company.company_description %></p>
@@ -19,6 +20,6 @@
     <%# <p><%= @gender_rating.mid_rating %></p>
     <%# <p><%= @gender_rating.junior_rating %></p>
   <%# </div> %>
-  <%= link_to "add_to_bookmarks", company_bookmarks_path(@company), class: "btn btn-primary", method: :post %>
+  <%= link_to "Add to bookmark dashboard", company_bookmarks_path(@company), class: "btn btn-primary", method: :post %>
 
 </div>
