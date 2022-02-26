@@ -11,8 +11,8 @@
     <%# <p><%= @company.company_description %></p>
     <%# <p><%= @gender_rating.c_rating %></p>
     <%# <p><%= @gender_rating.mid_rating %></p>
-    <%# <p><%= @gender_rating.junior_rating %></p> 
+    <%# <p><%= @gender_rating.junior_rating %></p>
   <%# </div> %>
+  <%= link_to "add_to_bookmarks", company_bookmarks_path(@company), class: "btn btn-primary", method: :post %>
 
 </div>
-
