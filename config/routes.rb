@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "dashboard", action: :show, controller: "users"
 
-  resources :companies, only: [:show, :new, :create, :index, :edit, :update] do
+  resources :companies do
     resources :bookmarks, only: [:create, :destroy]
   end
+  resources :gender_ratings, only: [:show]
 
   Rails.application.routes.draw do
     get "user/:id", to: "users#show", as: "user_show"
