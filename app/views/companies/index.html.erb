@@ -1,5 +1,22 @@
-<h1>H1</h1>
-
+<div class="companies_container">
+<div class="companies_banner">
+<h1>List of comapnies</h1>
 <% @companies.each do | company | %>
-<%= company.company_name %>
-<% end %>
+<div class="company_card">
+<div class="company_card_info">
+<%= cl_image_tag company.photo.key, class: "company_card_img" %>
+<div class="card-details">
+<h3><%= company.company_name %></h3>
+<h3><%= company.hq_location %></h3>
+      </div>
+      </div>
+<div class="rating">
+<div class="rating_score">
+<h4>100%</h4>
+</div>
+<i class="fas fa-heart"></i>
+</div>
+</div>
+    <% end %>
+ </div>
+</div>
