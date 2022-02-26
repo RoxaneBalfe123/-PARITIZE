@@ -9,7 +9,17 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <i class="fas fa-search" id="search"
+        data-controller="click-search"
+        data-click-search-target="search"
+        data-action="click->click-search#handleClick"></i>
+       <%= simple_form_for :search, url: companies_path, method: "GET", html: { class: 'form-inline d-none', id: 'search-form', data_click_search_target: "form" } do |f| %>
+          <%= f.input :company_name, label: false, input_html: {placeholder:  "Search a company"} %>
+          <%= f.submit "Search", class: "btn btn-primary" %>
+      <% end %>
+
       <ul class="navbar-nav me-auto">
+
         <% if user_signed_in? %>
           <li class="nav-item active">
             <%= link_to "Home", "#", class: "nav-link" %>
