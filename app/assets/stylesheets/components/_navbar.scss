@@ -3,6 +3,14 @@
   background: white;
 }
 
+.navbar-wagon-fixed {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
