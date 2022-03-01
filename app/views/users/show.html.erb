@@ -19,6 +19,7 @@
       <div class="company-bookmark-list">
         <% @bookmarks.each do | bookmark | %>
           <p><%= "Company: #{bookmark.company.company_name}" %></p>
+          <%= link_to "Delete bookmark", bookmark_path(bookmark), method: :delete %>
        <% end %>
       </div>
     </div>
