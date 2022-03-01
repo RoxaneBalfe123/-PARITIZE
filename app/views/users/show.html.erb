@@ -16,6 +16,11 @@
         <p><%= "Companies bookmarked: #{@user.bookmarks.count}" %></p>
        <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn btn-orange" %>
       </div>
+      <div class="company-bookmark-list">
+        <% @bookmarks.each do | bookmark | %>
+          <p><%= "Company: #{bookmark.company.company_name}" %></p>
+       <% end %>
+      </div>
     </div>
   </div>
 </div>
