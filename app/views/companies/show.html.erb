@@ -1,23 +1,23 @@
+<div class="banner">
+  <div class="container">
+    <h1> <%= @company.company_name %></h1>
+    <%= cl_image_tag @company.photo.key, class: "company_card_img" %>
+    <p> <%= @company.type_of_company %></p>
+  </div>
+</div>
 
-<div class="wrapper">
-  <div class ="company-details">
-    <h2><%= @company.company_name %></h2>
-    <%= @company.photo %>
-    <p><%= @company.type_of_company %></p>
-    <p>Number of employees:<%= @company.company_size %></p>
-    <p>Location: <%= @company.hq_location %></p>
-          <%= link_to 'Delete',
+<div class="company-description">
+  <p><%= @company.company_description %></p>
+  <%= @gender_rating.average_rating %>
+  <%= @gender_rating.c_rating %>
+  <%= @gender_rating.mid_rating %>
+  <%= @gender_rating.junior_rating  %>
+</div>
+
+
+<%= link_to 'Delete',
                     company_path(@company),
                     method: :delete,
                     class: "btn btn-danger",
                     data: { confirm: "Delete '#{@company.company_name}'?"} %>
   <%= link_to "Edit", edit_company_path, class: "btn btn-secondary" %>
-  </div>
-   <%# <div class="company-ratings"> %>
-    <%# <p><%= @company.company_description %></p>
-    <%# <p><%= @gender_rating.c_rating %></p>
-    <%# <p><%= @gender_rating.mid_rating %></p>
-    <%# <p><%= @gender_rating.junior_rating %></p>
-  <%# </div> %>
-
-</div>
