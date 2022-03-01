@@ -317,7 +317,7 @@ boeing.photo.attach(io: file, filename: 'boeing_eggbwo.png', content_type: 'imag
 boeing.user_id = user.id
 boeing.save!
 
-file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/boeing_eggbwo.png')
+file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/rolls_royce_i073x2.png')
   rolls_royce = Company.new(
     company_name: "Rolls_royce",
     type_of_company: type.sample,
@@ -334,6 +334,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/b
     to integrated propulsion, maneuvering, and positioning systems and deck machinery."
   )
 
-rolls_royce.photo.attach(io: file, filename: 'boeing_eggbwo.png', content_type: 'image/png')
+rolls_royce.photo.attach(io: file, filename: 'rolls_royce_i073x2', content_type: 'image/png')
 rolls_royce.user_id = user.id
 rolls_royce.save!
+
+puts "created alot of companies"
