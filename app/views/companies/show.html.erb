@@ -14,12 +14,6 @@
                     data: { confirm: "Delete '#{@company.company_name}'?"} %>
     <%= link_to "Edit", edit_company_path(id: @company.id), class: "btn btn-secondary" %>
   </div>
-   <%# <div class="company-ratings"> %>
-    <%# <p><%= @company.company_description %></p>
-    <%# <p><%= @gender_rating.c_rating %></p>
-    <%# <p><%= @gender_rating.mid_rating %></p>
-    <%# <p><%= @gender_rating.junior_rating %></p>
-  <%# </div> %>
   <%= link_to "Add to bookmark dashboard", company_bookmarks_path(@company), class: "btn btn-primary", method: :post %>
 
 </div>
