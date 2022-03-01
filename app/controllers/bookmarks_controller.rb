@@ -13,7 +13,8 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    Bookmark.where(bookmark_id: @company.id, user_id: current_user.id).first.destroy
-    redirect_to @company, notice: 'Company is no longer in your favorites dashboard'
+    @bookmark = Bookmark.find(params[:id])
+    @bookmark.destroy
+    redirect_to user_show_path(current_user)
   end
 end
