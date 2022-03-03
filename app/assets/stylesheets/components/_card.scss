@@ -2,10 +2,12 @@
   display: flex;
   justify-content: space-between;
   border-radius: 3px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.10); */
   padding: 3px;
   margin-top: 10px;
   position: relative;
+  border: 1px solid white;
+  box-shadow: #6FBDA7 0 0 5px;
 }
 .company-bookmark-list {
   padding: 16px;
@@ -31,7 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: green;
+  background-color: #6FBDA7;
   border-radius: 50%;
   height: 75px;
   width: 75px;
@@ -44,4 +46,5 @@
   width: 100px;
   object-fit: contain;
   object-position: center;
+
 }
