@@ -11,6 +11,8 @@ class CompaniesController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
+    @gender_rating = GenderRating.find_by(company_id: @company.id)
+
   end
 
   def new
