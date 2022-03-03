@@ -3,4 +3,5 @@ class UsersController < ApplicationController
     @user = current_user
     @bookmarks = @user.bookmarks
   end
+
 end
