@@ -17,6 +17,7 @@
           <% if company.photo.key != nil %>
             <%= cl_image_tag company.photo.key, class: "company_card_img" %>
           <% end %>
+
           <div class="card-details">
             <h3><%= company.company_name %></h3>
             <p><%= company.hq_location %></p>
@@ -30,4 +31,6 @@
         </div>
       </div>
     <% end %>
-</div>
+  <% end %>
+ </div>
+

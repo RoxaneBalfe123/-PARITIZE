@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <br/>
+    <h1 class="headers">Bookmarked Company Dashboard</h1>
+</div>
+<div class="container mt-4 border-bottom border-warning border-10 d-flex justify-content-start">
+</div>
+
+<div class="col d-flex justify-content-center mt-5">
+  <div class="card-profile">
+    <!-- Company tab header start here -->
+    <div class="card-bookmarks">
+      <div class="card-profile-infos">
+        <h2>My profile</h2>
+        <p><%= "Name: #{@user.name}" %></p>
+        <p><%= "Email: #{@user.email}" %></p>
+        <p><%= "Companies bookmarked: #{@user.bookmarks.count}" %></p>
+       <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn btn-orange" %>
+      </div>
+      <div class="company-bookmark-list">
+        <% @bookmarks.each do | bookmark | %>
+          <p><%= "Company: #{bookmark.company.company_name}" %></p>
+          <%= link_to "Delete bookmark", bookmark_path(bookmark), method: :delete %>
+       <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card-about-btn">
+  <br/>
+  <%= link_to 'About Paritize and The Team', class: 'btn btn-about mt-3' %>
+</div>

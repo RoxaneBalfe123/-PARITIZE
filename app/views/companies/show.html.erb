@@ -6,18 +6,14 @@
   </div>
 </div>
 
-<div class="company-description">
-  <p><%= @company.company_description %></p>
-  <%= @gender_rating.average_rating %>
-  <%= @gender_rating.c_rating %>
-  <%= @gender_rating.mid_rating %>
-  <%= @gender_rating.junior_rating  %>
-</div>
+  <div class="company-description">
+    <p><%= @company.company_description %></p>
+    <%= @gender_rating.average_rating %>
+    <%= @gender_rating.c_rating %>
+    <%= @gender_rating.mid_rating %>
+    <%= @gender_rating.junior_rating  %>
+  </div>
+  <div>
+    <%= link_to "Add to bookmark dashboard", company_bookmarks_path(@company), class: "btn btn-primary", method: :post %>
+  </div>
 
-
-<%= link_to 'Delete',
-                    company_path(@company),
-                    method: :delete,
-                    class: "btn btn-danger",
-                    data: { confirm: "Delete '#{@company.company_name}'?"} %>
-  <%= link_to "Edit", edit_company_path, class: "btn btn-secondary" %>
