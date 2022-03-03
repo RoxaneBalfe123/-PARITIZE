@@ -1,0 +1,29 @@
+body {
+  background-color: #FFFFFF;
+}
+.banner {
+  padding: 150px 0;
+  height: 100vh;
+  background-position: 495px -20px;
+  background-repeat: no-repeat;
+  background-size: 65%;
+}
+
+.banner img{
+  position: absolute;
+}
+
+.banner h1 {
+  margin: 0;
+  color: #254554;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 46px;
+  font-weight: bolder;
+}
+
+.banner p {
+  font-size: 32px;
+  color: #254554;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
