@@ -13,18 +13,9 @@ GenderRating.destroy_all
 Company.destroy_all
 User.destroy_all
 
-
 puts "lets create some companies"
 
 type = %w(science technology engineering math)
-
-# science = %w( AstraZeneca GSK Bayer Merck Roche)
-
-# technology = %w(Facebook Google Twitter)
-
-# engineering = %w(SpaceX, Tesla, Siemens)
-
-# maths = %w(EDF_Energy Boeing Rolls_Royce)
 
 location = %w(London Califonia Berlin Paris)
 
@@ -82,13 +73,22 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/g
     hq_location: location.sample,
     company_description: "GlaxoSmithKline PLC is a global healthcare company.
     The Company researches and develops a range of products in three primary
-    areas: Pharmaceuticals, Vaccines and Consumer Healthcare.",
-
+    areas: Pharmaceuticals, Vaccines and Consumer Healthcare."
   )
 
 gsk.photo.attach(io: file, filename: 'gsk_q6awrt.png', content_type: 'image/png')
 gsk.user_id = user.id
 gsk.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 25,
+  mid_rating: 30,
+  junior_rating: 28,
+  average_rating: 45,
+  company_id: gsk.id
+)
+gender_rating.company_id = gsk.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/bayer_qudgqa.png')
   bayer = Company.new(
@@ -105,13 +105,22 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/b
     company_description: "Bayer is a Life Science company with a more than 150-year
     history and core competencies in the areas of health care and agriculture. With
     our innovative products, we are contributing to finding solutions to some of the
-    major challenges of our time.",
-
+    major challenges of our time."
   )
 
 bayer.photo.attach(io: file, filename: 'bayer_qudgqa', content_type: 'image/png')
 bayer.user_id = user.id
 bayer.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 30,
+  mid_rating: 35,
+  junior_rating: 20,
+  average_rating: 50,
+  company_id: bayer.id
+)
+gender_rating.company_id = bayer.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/merck_tbwmyp.png')
   merck = Company.new(
@@ -128,13 +137,22 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/m
     company_description: "Merck & Co. manufactures a variety of well-known
     pharmaceutical drugs, vaccines and animal-health products. It made the first
     smallpox vaccine for commercial use in the U.S. It is also the maker of the
-    painkiller Vioxx and the HPV vaccine Gardasil.",
-
+    painkiller Vioxx and the HPV vaccine Gardasil."
   )
 
 merck.photo.attach(io: file, filename: 'merck_tbwmyp.png', content_type: 'image/png')
 merck.user_id = user.id
 merck.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 17,
+  mid_rating: 24,
+  junior_rating: 30,
+  average_rating: 40,
+  company_id: merck.id
+)
+gender_rating.company_id = merck.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/roche_xnrlgh.png')
   roche = Company.new(
@@ -151,13 +169,22 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/r
     company_description: "Headquartered in Basel, Switzerland, Roche is a leader
     in research-focused healthcare with combined strengths in pharmaceuticals and
     diagnostics. Roche is the world's largest biotech company, with truly differentiated
-    medicines in oncology, immunology, infectious diseases, ophthalmology and neuroscience.",
-
+    medicines in oncology, immunology, infectious diseases, ophthalmology and neuroscience."
   )
 
 roche.photo.attach(io: file, filename: 'roche_xnrlgh.png', content_type: 'image/png')
 roche.user_id = user.id
 roche.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 23.7,
+  mid_rating: 37.5,
+  junior_rating: 21,
+  average_rating: 53,
+  company_id: roche.id
+)
+gender_rating.company_id = roche.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/facebook_nyiok4.png')
   facebook = Company.new(
@@ -174,13 +201,22 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/f
     company_description: "Facebook is a website which allows users, who sign-up for free profiles,
     to connect with friends, work colleagues or people they don't know, online.
     It allows users to share pictures, music, videos, and articles, as well as
-    their own thoughts and opinions with however many people they like.",
-
+    their own thoughts and opinions with however many people they like."
   )
 
 facebook.photo.attach(io: file, filename: 'facebook_nyiok4.png', content_type: 'image/png')
 facebook.user_id = user.id
 facebook.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 28,
+  mid_rating: 33,
+  junior_rating: 43,
+  average_rating: 47,
+  company_id: facebook.id
+)
+gender_rating.company_id = facebook.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/google_rwfzvl.png')
   google = Company.new(
@@ -197,13 +233,22 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/g
     company_description: "Google is an American company that is most commonly
      known as a search engine. Although the company made it's name as a search engine,
      and the vast majority of its income comes from advertising because of this,
-     it has branched out into a number of areas such as cloud computing, software and hardware.",
-
+     it has branched out into a number of areas such as cloud computing, software and hardware."
   )
 
 google.photo.attach(io: file, filename: 'google_rwfzvl.png', content_type: 'image/png')
 google.user_id = user.id
 google.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 22,
+  mid_rating: 32,
+  junior_rating: 28,
+  average_rating: 46,
+  company_id: google.id
+)
+gender_rating.company_id = google.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/twitter_qb63cp.png')
   twitter = Company.new(
@@ -220,13 +265,22 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/t
     company_description: "Twitter is known as a micro-blogging site. Blogging has
     been around for some time. Usually blogging consists of people setting up basic
     websites where they write about whatever they want, whether it be politics, sport,
-    cooking, fashion etc.",
-
+    cooking, fashion etc."
   )
 
 twitter.photo.attach(io: file, filename: 'twitter_qb63cp.png', content_type: 'image/png')
 twitter.user_id = user.id
 twitter.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 28,
+  mid_rating: 39,
+  junior_rating: 29,
+  average_rating: 51,
+  company_id: twitter.id
+)
+gender_rating.company_id = twitter.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/space_x_hbmydy.png')
   spacex = Company.new(
@@ -243,13 +297,22 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/s
     company_description: "SpaceX was formed by entrepreneur Elon Musk in the hopes
     of revolutionizing the aerospace industry and making affordable spaceflight a
     reality. The company entered the arena with the Falcon 1 rocket, a two-stage
-    liquid-fueled craft designed to send small satellites into orbit.",
-
+    liquid-fueled craft designed to send small satellites into orbit."
   )
 
 spacex.photo.attach(io: file, filename: 'space_x_hbmydy.png', content_type: 'image/png')
 spacex.user_id = user.id
 spacex.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 20.3,
+  mid_rating: 25.6,
+  junior_rating: 28.9,
+  average_rating: 39,
+  company_id: spacex.id
+)
+gender_rating.company_id = spacex.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/tesla_icwlzv.png')
   tesla = Company.new(
@@ -266,13 +329,22 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/t
     company_description: "Best described as a battery company, Tesla is best known
     for its electric cars. The company is also known for specialising in solar panels
     and Lithium-ion battery energy storage. The company first gained attention following
-    the 2008 release of the Tesla Roadster, the very first electric sports car.",
-
+    the 2008 release of the Tesla Roadster, the very first electric sports car."
   )
 
 tesla.photo.attach(io: file, filename: 'tesla_icwlzv.png', content_type: 'image/png')
 tesla.user_id = user.id
 tesla.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 25.8,
+  mid_rating: 36,
+  junior_rating: 29,
+  average_rating: 42,
+  company_id: tesla.id
+)
+gender_rating.company_id = tesla.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/siemens_rleboh.png')
   siemens = Company.new(
@@ -288,13 +360,22 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/s
     hq_location: location.sample,
     company_description: "Siemens Limited is a technology company focused on industry,
     infrastructure, digital transformation, transport as well as transmission and generation
-    of electrical power. It is the flagship listed company of Siemens AG in India.",
-
+    of electrical power. It is the flagship listed company of Siemens AG in India."
   )
 
 siemens.photo.attach(io: file, filename: 'siemens_rleboh.png', content_type: 'image/png')
 siemens.user_id = user.id
 siemens.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 29,
+  mid_rating: 37,
+  junior_rating: 30,
+  average_rating: 53,
+  company_id: siemens.id
+)
+gender_rating.company_id = siemens.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/edf_u7rpi8.png')
   edf_energy = Company.new(
@@ -311,13 +392,22 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/e
     company_description: "EDF Energy is a British integrated energy company, wholly
     owned by the French state owned EDF (Électricité de France), with operations spanning
     electricity generation and the sale of natural gas and electricity to homes and businesses
-    throughout the United Kingdom.",
-
+    throughout the United Kingdom."
   )
 
 edf_energy.photo.attach(io: file, filename: 'edf_u7rpi8.png', content_type: 'image/png')
 edf_energy.user_id = user.id
 edf_energy.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 27,
+  mid_rating: 30,
+  junior_rating: 45,
+  average_rating: 50,
+  company_id: edf_energy.id
+)
+gender_rating.company_id = edf_energy.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/boeing_eggbwo.png')
   boeing = Company.new(
@@ -333,13 +423,22 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/b
     hq_location: location.sample,
     company_description: "Boeing is the world's largest aerospace company and leading
     manufacturer of commercial jetliners, defense, space and security systems, and service
-    provider of aftermarket support.",
-
+    provider of aftermarket support."
   )
 
 boeing.photo.attach(io: file, filename: 'boeing_eggbwo.png', content_type: 'image/png')
 boeing.user_id = user.id
 boeing.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 22.5,
+  mid_rating: 30.8,
+  junior_rating: 29,
+  average_rating: 44,
+  company_id: boeing.id
+)
+gender_rating.company_id = boeing.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/rolls_royce_i073x2.png')
   rolls_royce = Company.new(
@@ -356,11 +455,20 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/r
     company_description: "Rolls-Royce is the world's leading supplier of marine
     propulsion equipment. Its products and services range from complete ship design
     to integrated propulsion, maneuvering, and positioning systems and deck machinery."
-
   )
 
 rolls_royce.photo.attach(io: file, filename: 'rolls_royce_i073x2', content_type: 'image/png')
 rolls_royce.user_id = user.id
 rolls_royce.save!
 
-puts "created alot of companies"
+gender_rating = GenderRating.new(
+  c_rating: 21,
+  mid_rating: 32,
+  junior_rating: 18,
+  average_rating: 35,
+  company_id: rolls_royce.id
+)
+gender_rating.company_id = rolls_royce.id
+gender_rating.save!
+
+puts "created a lot of companies"
