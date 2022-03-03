@@ -8,21 +8,14 @@
 
 require "open-uri"
 puts "clean DB"
-User.destroy_all
-Company.destroy_all
 Bookmark.destroy_all
+GenderRating.destroy_all
+Company.destroy_all
+User.destroy_all
 
 puts "lets create some companies"
 
 type = %w(science technology engineering math)
-
-# science = %w( AstraZeneca GSK Bayer Merck Roche)
-
-# technology = %w(Facebook Google Twitter)
-
-# engineering = %w(SpaceX, Tesla, Siemens)
-
-# maths = %w(EDF_Energy Boeing Rolls_Royce)
 
 location = %w(London Califonia Berlin Paris)
 
@@ -56,6 +49,16 @@ astra_zeneca.photo.attach(io: file, filename: 'astrazeneca_jxzwhh.png', content_
 astra_zeneca.user_id = user.id
 astra_zeneca.save!
 
+gender_rating = GenderRating.new(
+  c_rating: 12.3,
+  mid_rating: 23.0,
+  junior_rating: 21.1,
+  average_rating: 40,
+  company_id: astra_zeneca.id
+)
+gender_rating.company_id = astra_zeneca.id
+gender_rating.save!
+
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/gsk_q6awrt.png')
   gsk = Company.new(
     company_name: "GSK",
@@ -76,6 +79,16 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/g
 gsk.photo.attach(io: file, filename: 'gsk_q6awrt.png', content_type: 'image/png')
 gsk.user_id = user.id
 gsk.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 25,
+  mid_rating: 30,
+  junior_rating: 28,
+  average_rating: 45,
+  company_id: gsk.id
+)
+gender_rating.company_id = gsk.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/bayer_qudgqa.png')
   bayer = Company.new(
@@ -99,6 +112,16 @@ bayer.photo.attach(io: file, filename: 'bayer_qudgqa', content_type: 'image/png'
 bayer.user_id = user.id
 bayer.save!
 
+gender_rating = GenderRating.new(
+  c_rating: 30,
+  mid_rating: 35,
+  junior_rating: 20,
+  average_rating: 50,
+  company_id: bayer.id
+)
+gender_rating.company_id = bayer.id
+gender_rating.save!
+
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/merck_tbwmyp.png')
   merck = Company.new(
     company_name: "Merck",
@@ -120,6 +143,16 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/m
 merck.photo.attach(io: file, filename: 'merck_tbwmyp.png', content_type: 'image/png')
 merck.user_id = user.id
 merck.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 17,
+  mid_rating: 24,
+  junior_rating: 30,
+  average_rating: 40,
+  company_id: merck.id
+)
+gender_rating.company_id = merck.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/roche_xnrlgh.png')
   roche = Company.new(
@@ -143,6 +176,16 @@ roche.photo.attach(io: file, filename: 'roche_xnrlgh.png', content_type: 'image/
 roche.user_id = user.id
 roche.save!
 
+gender_rating = GenderRating.new(
+  c_rating: 23.7,
+  mid_rating: 37.5,
+  junior_rating: 21,
+  average_rating: 53,
+  company_id: roche.id
+)
+gender_rating.company_id = roche.id
+gender_rating.save!
+
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/facebook_nyiok4.png')
   facebook = Company.new(
     company_name: "Facebook",
@@ -164,6 +207,16 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/f
 facebook.photo.attach(io: file, filename: 'facebook_nyiok4.png', content_type: 'image/png')
 facebook.user_id = user.id
 facebook.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 28,
+  mid_rating: 33,
+  junior_rating: 43,
+  average_rating: 47,
+  company_id: facebook.id
+)
+gender_rating.company_id = facebook.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/google_rwfzvl.png')
   google = Company.new(
@@ -187,6 +240,16 @@ google.photo.attach(io: file, filename: 'google_rwfzvl.png', content_type: 'imag
 google.user_id = user.id
 google.save!
 
+gender_rating = GenderRating.new(
+  c_rating: 22,
+  mid_rating: 32,
+  junior_rating: 28,
+  average_rating: 46,
+  company_id: google.id
+)
+gender_rating.company_id = google.id
+gender_rating.save!
+
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/twitter_qb63cp.png')
   twitter = Company.new(
     company_name: "Twitter",
@@ -208,6 +271,16 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/t
 twitter.photo.attach(io: file, filename: 'twitter_qb63cp.png', content_type: 'image/png')
 twitter.user_id = user.id
 twitter.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 28,
+  mid_rating: 39,
+  junior_rating: 29,
+  average_rating: 51,
+  company_id: twitter.id
+)
+gender_rating.company_id = twitter.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/space_x_hbmydy.png')
   spacex = Company.new(
@@ -231,6 +304,16 @@ spacex.photo.attach(io: file, filename: 'space_x_hbmydy.png', content_type: 'ima
 spacex.user_id = user.id
 spacex.save!
 
+gender_rating = GenderRating.new(
+  c_rating: 20.3,
+  mid_rating: 25.6,
+  junior_rating: 28.9,
+  average_rating: 39,
+  company_id: spacex.id
+)
+gender_rating.company_id = spacex.id
+gender_rating.save!
+
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/tesla_icwlzv.png')
   tesla = Company.new(
     company_name: "Tesla",
@@ -253,6 +336,16 @@ tesla.photo.attach(io: file, filename: 'tesla_icwlzv.png', content_type: 'image/
 tesla.user_id = user.id
 tesla.save!
 
+gender_rating = GenderRating.new(
+  c_rating: 25.8,
+  mid_rating: 36,
+  junior_rating: 29,
+  average_rating: 42,
+  company_id: tesla.id
+)
+gender_rating.company_id = tesla.id
+gender_rating.save!
+
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/siemens_rleboh.png')
   siemens = Company.new(
     company_name: "Siemens",
@@ -273,6 +366,16 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/s
 siemens.photo.attach(io: file, filename: 'siemens_rleboh.png', content_type: 'image/png')
 siemens.user_id = user.id
 siemens.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 29,
+  mid_rating: 37,
+  junior_rating: 30,
+  average_rating: 53,
+  company_id: siemens.id
+)
+gender_rating.company_id = siemens.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/edf_u7rpi8.png')
   edf_energy = Company.new(
@@ -296,6 +399,16 @@ edf_energy.photo.attach(io: file, filename: 'edf_u7rpi8.png', content_type: 'ima
 edf_energy.user_id = user.id
 edf_energy.save!
 
+gender_rating = GenderRating.new(
+  c_rating: 27,
+  mid_rating: 30,
+  junior_rating: 45,
+  average_rating: 50,
+  company_id: edf_energy.id
+)
+gender_rating.company_id = edf_energy.id
+gender_rating.save!
+
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/boeing_eggbwo.png')
   boeing = Company.new(
     company_name: "Boeing",
@@ -316,6 +429,16 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/b
 boeing.photo.attach(io: file, filename: 'boeing_eggbwo.png', content_type: 'image/png')
 boeing.user_id = user.id
 boeing.save!
+
+gender_rating = GenderRating.new(
+  c_rating: 22.5,
+  mid_rating: 30.8,
+  junior_rating: 29,
+  average_rating: 44,
+  company_id: boeing.id
+)
+gender_rating.company_id = boeing.id
+gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/rolls_royce_i073x2.png')
   rolls_royce = Company.new(
@@ -338,4 +461,14 @@ rolls_royce.photo.attach(io: file, filename: 'rolls_royce_i073x2', content_type:
 rolls_royce.user_id = user.id
 rolls_royce.save!
 
-puts "created alot of companies"
+gender_rating = GenderRating.new(
+  c_rating: 21,
+  mid_rating: 32,
+  junior_rating: 18,
+  average_rating: 35,
+  company_id: rolls_royce.id
+)
+gender_rating.company_id = rolls_royce.id
+gender_rating.save!
+
+puts "created a lot of companies"
