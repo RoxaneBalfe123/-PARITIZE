@@ -1,7 +1,8 @@
 <div class="wrapper">
   <div class ="company-details">
-
-  <h1> Company X’s total score: </h1>
+  <h1> Gender represenation scores:
+   total, entry level, mid/senior, and to C-level or board positions</h1>
+  <h2> Your total gender rating score: </h2>
   <% if @gender_rating.average_rating >= 50 %>
     <div class="circle-green"></div>
   <% elsif @gender_rating.average_rating <= 29 %>
@@ -10,7 +11,8 @@
     <div class="circle-orange"></div>
   <% end %>
 
-    <h2>c_rating : </h2>
+    <h2> C-LEVEL AND BOARD </h2>
+    <h3> Gender score </h3>
   <% if @gender_rating.c_rating >= 50 %>
     <div class="circle-green"></div>
   <% elsif @gender_rating.c_rating <= 29 %>
@@ -19,7 +21,8 @@
     <div class="circle-orange"></div>
   <% end %>
 
-    <h2>mid_rating : </h2>
+    <h2> MID AND SENIOR LEVEL </h2>
+    <h3> Gender score </h3>
   <% if @gender_rating.mid_rating >= 50 %>
     <div class="circle-green"></div>
   <% elsif @gender_rating.mid_rating <= 29 %>
@@ -28,7 +31,8 @@
     <div class="circle-orange"></div>
   <% end %>
 
-      <h2>junior_rating : </h2>
+    <h2> ENTRY AND JUNIOR LEVEL </h2>
+    <h3> Gender score </h3>
   <% if @gender_rating.junior_rating >= 50 %>
     <div class="circle-green"></div>
   <% elsif @gender_rating.junior_rating <= 29 %>
@@ -39,6 +43,6 @@
 
   </div>
 
-  <h2>Read more on how to improve</h2>
-  <h3> Resource</h3>
+  <h2>Would you like to know how to attract diverse talent to your organisation?</h2>
+  <h3> See resources</h3>
 </div>
