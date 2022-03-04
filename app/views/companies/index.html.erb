@@ -17,7 +17,7 @@
        <div class="company_card_info">
         <% if company.photo.key != nil %>
            <%= cl_image_tag company.photo.key, class: "company_card_img" %>
-          <%= link_to "View bookmarked company", company_path(company) %>
+          <%= link_to "Bookmark company", company_path(company) %>
          <% end %>
          <div class="card-details">
            <h3><%= company.company_name %></h3>
