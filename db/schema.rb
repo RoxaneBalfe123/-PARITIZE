@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_01_210047) do
+ActiveRecord::Schema.define(version: 2022_03_05_104701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,11 +57,8 @@ ActiveRecord::Schema.define(version: 2022_03_01_210047) do
     t.string "type_of_company"
     t.string "company_size"
     t.integer "women_c_level"
-    t.integer "men_c_level"
     t.integer "women_mid_senior_level"
-    t.integer "men_mid_senior_level"
     t.integer "women_junior_level"
-    t.integer "men_junior_level"
     t.string "hq_location"
     t.text "company_description"
     t.bigint "user_id", null: false
