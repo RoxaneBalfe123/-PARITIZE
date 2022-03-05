@@ -1,6 +1,6 @@
 .btn-about {
   color: white;
-  background-color: $dark-gray;
+  background-color: $medium-grey;
   padding: 8px 16px;
   border-radius: 8px;
   border: none;
@@ -29,4 +29,14 @@
   #modal-button {
     padding: 0px;
   }
+}
+
+.btn-primary {
+    background-color: $green-light !important;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.btn-primary:hover {
+  background-color: $green-puzzle !important;
 }

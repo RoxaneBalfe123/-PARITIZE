@@ -1,21 +1,27 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-6">
-  <%= simple_form_for [@user, @company] do |f| %>
-    <%= f.input :company_name %>
-    <%= f.input :company_description %>
-    <%= f.input :hq_location %>
-    <%= f.input :company_size %>
-    <%= f.input :type_of_company %>
-    <%= f.input :women_c_level %>
-    <%= f.input :men_c_level %>
-    <%= f.input :women_mid_senior_level %>
-    <%= f.input :men_mid_senior_level %>
-    <%= f.input :women_junior_level %>
-    <%= f.input :men_junior_level %>
-    <%= f.input :photo %>
-    <%= f.submit "Submit", class: "btn btn-primary btn-lg btn-block" %>
-  <% end %>
-</div>
-  </div>
+    <div class="col-12 col-sm-6 form-background">
+     <h2>Enter your company details</h2>
+     <%= simple_form_for [@user, @company] do |f| %>
+     <div class="form-inputs">
+     <%= f.input :company_name, placeholder: "Enter the full name of your company", label: "Company name" %>
+     <%= f.input :company_description, placeholder: "Brief description of the company", label: "Description of the company" %>
+     <%= f.input :hq_location, placeholder: "Example: London", label: "Location"%>
+     <%= f.input :company_size, label: "Size of the company", collection: Company::COMPANY_SIZE, as: :radio_buttons, wrapper: :vertical_collection_inline %>
+     <%= f.input :type_of_company, label: "Type of the company", as: :radio_buttons, collection: Company::TYPE_OF_COMPANY, wrapper: :vertical_collection_inline %>
+     <p>What percentage of women are in the below positions in your company?</p>
+     <div class= "form-levels">
+     <%= f.input :women_c_level, label: "C-level", placeholder: "50%" %>
+     <%= f.input :women_mid_senior_level, label: "Mid-senior-level",placeholder: "50%" %>
+     <%= f.input :women_junior_level, label: "Junior-level", placeholder: "50%" %>
+     </div>
+     <%= f.input :photo, hint: 'Supported formats: .jpg, .png, .bmp. Please ensure your file is in one of these formats.' %>
+     </div>
+     <div class="form-actions">
+     <%= f.submit "Submit", class: "btn btn-primary btn-lg btn-block" %>
+     </div>
+     <% end %>
     </div>
+  </div>
+</div>
+    <%= image_tag("https://img.freepik.com/free-vector/diverse-crowd-people-different-ages-races_74855-5235.jpg?w=1800", class: "img-form") %>
