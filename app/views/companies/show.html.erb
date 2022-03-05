@@ -1,19 +1,13 @@
 <div class="banner">
   <div class="container">
-    <h1> <%= @company.company_name %></h1>
-    <%= cl_image_tag @company.photo.key, class: "company_card_img" %>
-    <p> <%= @company.type_of_company %></p>
+      <h1> <%= @company.company_name %></h1>
+      <%= cl_image_tag @company.photo.key, class: "company_card_img" %>
+      <p> <%= @company.type_of_company %></p>
+      <p><%= @company.company_description %></p>
+      <p><%= @gender_rating.average_rating %></p>
+      <p><%= @gender_rating.c_rating %></p>
+      <p><%= @gender_rating.mid_rating %></p>
+      <p><%= @gender_rating.junior_rating  %></p>
+      <%= link_to "Add to bookmarks", company_bookmarks_path(@company), class: "btn btn-primary", method: :post %>
   </div>
 </div>
-
-  <div class="company-description">
-    <p><%= @company.company_description %></p>
-    <%= @gender_rating.average_rating %>
-    <%= @gender_rating.c_rating %>
-    <%= @gender_rating.mid_rating %>
-    <%= @gender_rating.junior_rating  %>
-  </div>
-  <div>
-    <%= link_to "Add to bookmark dashboard", company_bookmarks_path(@company), class: "btn btn-primary", method: :post %>
-  </div>
-
