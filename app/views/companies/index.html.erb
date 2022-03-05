@@ -1,5 +1,5 @@
 <div class="companies_container">
-    <h1>List of companies</h1>
+    <h1>Best rated companies</h1>
 
 <div class="dropdown">
   <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -14,21 +14,39 @@
 </div>
    <% @companies.each do | company | %>
      <div class="company_card">
+
        <div class="company_card_info">
         <% if company.photo.key != nil %>
+          <%= link_to company_path(company) do %>
            <%= cl_image_tag company.photo.key, class: "company_card_img" %>
-          <%= link_to "View bookmarked company", company_path(company) %>
+         <% end %>
          <% end %>
          <div class="card-details">
-           <h3><%= company.company_name %></h3>
+           <h3><%= link_to company.company_name, company_path(company) %></h3>
            <p><%= company.hq_location %></p>
          </div>
        </div>
-       <div class="rating">
-         <div class="rating_score">
-           <h4>100%</h4>
-         </div>
-         <i class="fas fa-heart"></i>
+
+       <div class="rating-heart">
+        <div class="rating">
+            <% if company.gender_ratings.first.average_rating >= 50 %>
+              <div class="circle-rating-green"></div>
+            <% elsif company.gender_ratings.first.average_rating <= 29 %>
+              <div class="circle-rating-red"></div>
+            <% else company.gender_ratings.first.average_rating %>
+              <div class="circle-rating-orange"></div>
+            <% end %>
+            <h4><%=company.gender_ratings.first.average_rating %>%</h4>
+          </div>
+          <% if company.bookmarks.find { |bookmark| bookmark.user == current_user} != nil %>
+          <%= link_to bookmark_path(company.bookmarks.find { |bookmark| bookmark.user == current_user}), method: :delete  do %>
+            <i class="fas fa-bookmark bookmarked"></i>
+          <% end %>
+          <% else %>
+           <%= link_to company_bookmarks_path(company), method: :POST do%>
+            <i class="fas fa-bookmark unbookmarked"></i>
+          <% end %>
+          <% end %>
        </div>
       </div>
     <% end %>
