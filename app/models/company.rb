@@ -12,11 +12,8 @@ class Company < ApplicationRecord
   validates :company_size, inclusion: { in: COMPANY_SIZE }
   validates :type_of_company, inclusion: { in: TYPE_OF_COMPANY }
   validates :women_c_level, numericality: { in: (1..100) }
-  validates :men_c_level, numericality: { in: (1..100) }
   validates :women_mid_senior_level, numericality: { in: (1..100) }
-  validates :men_mid_senior_level, numericality: { in: (1..100) }
   validates :women_junior_level, numericality: { in: (1..100) }
-  validates :men_junior_level, numericality: { in: (1..100) }
   include PgSearch::Model
   pg_search_scope :search_by_company_name,
     against: [ :company_name ],

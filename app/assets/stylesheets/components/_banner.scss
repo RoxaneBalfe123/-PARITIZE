@@ -1,29 +1,69 @@
 body {
-  background-color: #FFFFFF;
-}
-.banner {
-  padding: 150px 0;
-  height: 100vh;
-  background-position: 495px -20px;
-  background-repeat: no-repeat;
-  background-size: 65%;
+  background: white;
 }
 
-.banner img{
-  position: absolute;
+.banner {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  padding-top: 80px;
+  min-height: 100vh;
+  div {
+    flex: 1;
+  }
+  .hero {
+    flex: 1;
+    width: 500px;
+    height:fit-content;
+    object-fit: contain;
+  }
 }
 
 .banner h1 {
-  margin: 0;
   color: #254554;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 46px;
-  font-weight: bolder;
+  font-size: 64px;
 }
 
 .banner p {
   font-size: 32px;
   color: #254554;
   opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+// search style
+.search-form {
+  font-size: 28px;
+  color: black;
+  margin-right: 10px;
+}
+
+.form-inline {
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+.btn-flat {
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+  background-color: #6FBDA7;
+  color: white;
+  border-radius: 4px;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  width: 70%;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    padding: 40px;
+  }
+}
+
+.logo-title {
+  text-align: center;
+  margin-top: 40px;
 }

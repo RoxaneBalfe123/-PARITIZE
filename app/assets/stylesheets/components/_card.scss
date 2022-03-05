@@ -3,12 +3,28 @@
   justify-content: space-between;
   border-radius: 3px;
   /* box-shadow: 0 0 10px rgba(0,0,0,0.10); */
-  padding: 3px;
+  padding: 10px;
   margin-top: 10px;
   position: relative;
   border: 1px solid white;
   box-shadow: #6FBDA7 0 0 5px;
 }
+.companies_container {
+  width: 600px;
+  margin: 0 auto;
+}
+.company_card_img {
+  margin-right: 20px;
+   height: 100px;
+  width: 100px;
+  object-fit: contain;
+  object-position: center;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
 .company-bookmark-list {
   padding: 16px;
   justify-content: space-between;
@@ -21,30 +37,33 @@
   justify-content: space-evenly;
 }
 
+.card-details {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
 .rating {
   display: flex;
 }
-
-.companies_container {
-  width: 600px;
-  margin: 0 auto;
-}
-.rating_score {
+.rating-heart {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #6FBDA7;
-  border-radius: 50%;
-  height: 75px;
-  width: 75px;
-  h4 {
-    margin: 0;
-  }
 }
-.company_card_img {
-  height: 100px;
-  width: 100px;
-  object-fit: contain;
-  object-position: center;
 
+h4 {
+    margin: 0;
+    font-size: 18px;
+    position: relative;
+    top: 20px;
+    left: 5px;
+    text-decoration: none;
+  }
+
+.bookmarked {
+  color: red;
+  margin-left: 20px;
+}
+
+.unbookmarked {
+  color: black;
+  margin-left: 20px;
 }
