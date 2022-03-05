@@ -60,8 +60,7 @@ class CompaniesController < ApplicationController
   def company_params
     params.require(:company)
           .permit(:company_name, :company_description, :hq_location, :company_size, :type_of_company, :women_c_level,
-                  :men_c_level, :women_mid_senior_level, :men_mid_senior_level, :women_junior_level, :men_junior_level,
-                  :photo)
+                  :women_mid_senior_level, :women_junior_level, :photo)
   end
 
   def company_name_and_type
