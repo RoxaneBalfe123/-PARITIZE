@@ -1,27 +1,23 @@
-<div class="container mt-5">
-  <br/>
-    <h1 class="headers">Bookmarked Company Dashboard</h1>
-</div>
-<div class="container mt-4 border-bottom border-warning border-10 d-flex justify-content-start">
-</div>
-
-<div class="col d-flex justify-content-center mt-5">
-  <div class="card-profile">
-    <!-- Company tab header start here -->
-    <div class="card-bookmarks">
-      <div class="card-profile-infos">
-        <h2>My profile</h2>
-        <p><%= "Name: #{@user.name}" %></p>
-        <p><%= "Email: #{@user.email}" %></p>
-        <p><%= "Companies bookmarked: #{@user.bookmarks.count}" %></p>
-       <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn btn-orange" %>
+<div class="container-show">
+  <div class="bookmark-header">
+    <h1>Bookmark Dashboard</h1>
+  </div>
+    <p class="card-profile"><h2>My profile</h2></p>
+      <div class= "profile-info">
+        <p class= "card-profile-name-email card-style">
+          <p class= card-name><%= "Name: #{@user.name}" %></p>
+          <p class= card-email><%= "Email: #{@user.email}" %></p>
+      <div>
+      <div class="card-style companies-bookmarked-wrapper">
+        <p class="companies-bookmarked"><%= "Companies bookmarked: #{@user.bookmarks.count}" %></p>
       </div>
-      <div class="company-bookmark-list">
-        <% @bookmarks.each do | bookmark | %>
-          <p><%= "Company: #{bookmark.company.company_name}" %></p>
-          <%= link_to "Delete bookmark", bookmark_path(bookmark), method: :delete %>
-       <% end %>
       </div>
+    </div>
+    <div class="company-bookmark-list card-style">
+      <% @bookmarks.each do | bookmark | %>
+        <p><%= "Company: #{bookmark.company.company_name}" %></p>
+        <%= link_to "Delete bookmark", bookmark_path(bookmark), method: :delete %>
+      <% end %>
     </div>
   </div>
 </div>
@@ -30,4 +26,5 @@
 <div class="card-about-btn">
   <br/>
   <%= link_to 'About Paritize and The Team', class: 'btn btn-about mt-3' %>
+  <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn btn-orange" %>
 </div>
