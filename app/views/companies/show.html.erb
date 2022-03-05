@@ -1,13 +1,19 @@
-<div class="banner">
-  <div class="container">
-      <h1> <%= @company.company_name %></h1>
-      <%= cl_image_tag @company.photo.key, class: "company_card_img" %>
-      <p> <%= @company.type_of_company %></p>
-      <p><%= @company.company_description %></p>
-      <p><%= @gender_rating.average_rating %></p>
-      <p><%= @gender_rating.c_rating %></p>
-      <p><%= @gender_rating.mid_rating %></p>
-      <p><%= @gender_rating.junior_rating  %></p>
-      <%= link_to "Add to bookmark dashboard", company_bookmarks_path(@company), class: "btn btn-primary", method: :post %>
+<div class="container-show">
+  <div class="company-header">
+    <%= cl_image_tag @company.photo.key, width: 100 %>
+    <h2 class="company-name"> <%= @company.company_name.capitalize %></h2>
   </div>
+    <p class="company-type"><%= @company.type_of_company.capitalize %></p>
+    <div class="company-description-score">
+      <p class="company-description card-style"><%= @company.company_description %></p>
+      <div class="card-style company-score-wrapper">
+        <p class="company-score">Total gender rating score:</p>
+        <p class="company-rating"> <%= @gender_rating.average_rating %>%</p>
+      </div>
+    </div>
+    <div class="diversity-scores card-style">
+      <p>C-level: <%= @gender_rating.c_rating %>%</p>
+      <p>Mid and senior level: <%= @gender_rating.mid_rating %>%</p>
+      <p>Entry and junior level: <%= @gender_rating.junior_rating %>%</p>
+    </div>
 </div>
