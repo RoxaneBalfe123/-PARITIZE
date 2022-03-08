@@ -67,3 +67,25 @@ h4 {
   color: black;
   margin-left: 20px;
 }
+
+.resource-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  border: none;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.card:hover{
+  box-shadow: $shadow-sm;
+  transform: scale(1.04);
+  transition:0.5s;
+
+}
+.card-text{
+  height:160px;
+}
+.card {
+  border-radius: 8px;
+}
