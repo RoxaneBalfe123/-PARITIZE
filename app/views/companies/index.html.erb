@@ -1,19 +1,26 @@
-<div class="companies_container">
-    <h1>Best rated companies</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-6">
+     <h1>Best rated companies</h1>
+    <%= simple_form_for :type_search, url: companies_path, method: "GET" do |f| %>
+      <%= f.input :company_type, label: false, input_html: {placeholder:  "company type"}, collection: Company::TYPE_OF_COMPANY %>
+      <%= f.submit "Search", class: "btn btn-flat" %>
+    <% end %>
 
-<div class="dropdown">
-  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-    Company types
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li><button class="dropdown-item" type="button">Science</button></li>
-    <li><button class="dropdown-item" type="button">Technology</button></li>
-    <li><button class="dropdown-item" type="button">Engineering</button></li>
-    <li><button class="dropdown-item" type="button">Math</button></li>
-  </ul>
-</div>
+  <div class="card-presence m-3">
+    <p>Women's presence:</p>
+    <div class="circles">
+      <p>High</p>
+      <img src="app/assets/images/circle_green.png" alt="">
+      <p>Moderate</p>
+      <img src="app/assets/images/circle_ambar.png" alt="">
+      <p>Poor</p>
+      <img src="app/assets/images/circle_red.png" alt="">
+    </div>
+ </div>
+  <% @companies = @companies.sort_by { |company| company.gender_ratings.first.average_rating}.reverse%>
    <% @companies.each do | company | %>
-     <div class="company_card">
+     <div class="company_card m-3">
 
        <div class="company_card_info">
         <% if company.photo.key != nil %>
@@ -26,14 +33,14 @@
          </div>
        </div>
 
-       <div class="rating-heart">
+       <div class="rating-bookmark">
         <div class="rating">
             <% if company.gender_ratings.first.average_rating >= 50 %>
               <div class="circle-rating-green"></div>
             <% elsif company.gender_ratings.first.average_rating <= 29 %>
-              <div class="circle-rating-red"></div>
-            <% else company.gender_ratings.first.average_rating %>
               <div class="circle-rating-orange"></div>
+            <% else company.gender_ratings.first.average_rating %>
+              <div class="circle-rating-red"></div>
             <% end %>
             <h4><%=company.gender_ratings.first.average_rating %>%</h4>
           </div>
@@ -50,4 +57,4 @@
       </div>
     <% end %>
   <% end %>
- </div>
+</div>

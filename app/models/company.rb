@@ -14,10 +14,17 @@ class Company < ApplicationRecord
   validates :women_c_level, numericality: { in: (1..100) }
   validates :women_mid_senior_level, numericality: { in: (1..100) }
   validates :women_junior_level, numericality: { in: (1..100) }
+
   include PgSearch::Model
   pg_search_scope :search_by_company_name,
-    against: [ :company_name ],
+    against: [ :company_name, :type_of_company ],
     using: {
       tsearch: { prefix: true }
     }
+
+  # pg_search_scope :search_by_company_type,
+  # against: [ :type_of_company ],
+  # using: {
+  # #     tsearch: { prefix: true }
+  #   }
 end
