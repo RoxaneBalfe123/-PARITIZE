@@ -33,11 +33,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/a
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "AstraZeneca Plc (AstraZeneca) is a biopharmaceutical
     company, which discovers, produces and commercializes a wide range of prescription
@@ -65,11 +62,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/g
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "GlaxoSmithKline PLC is a global healthcare company.
     The Company researches and develops a range of products in three primary
@@ -96,11 +90,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/b
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "Bayer is a Life Science company with a more than 150-year
     history and core competencies in the areas of health care and agriculture. With
@@ -128,11 +119,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/m
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "Merck & Co. manufactures a variety of well-known
     pharmaceutical drugs, vaccines and animal-health products. It made the first
@@ -160,11 +148,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/r
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "Headquartered in Basel, Switzerland, Roche is a leader
     in research-focused healthcare with combined strengths in pharmaceuticals and
@@ -192,11 +177,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/f
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "Facebook is a website which allows users, who sign-up for free profiles,
     to connect with friends, work colleagues or people they don't know, online.
@@ -224,11 +206,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/g
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "Google is an American company that is most commonly
      known as a search engine. Although the company made it's name as a search engine,
@@ -256,11 +235,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/t
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "Twitter is known as a micro-blogging site. Blogging has
     been around for some time. Usually blogging consists of people setting up basic
@@ -288,11 +264,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/s
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "SpaceX was formed by entrepreneur Elon Musk in the hopes
     of revolutionizing the aerospace industry and making affordable spaceflight a
@@ -320,11 +293,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/t
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "Best described as a battery company, Tesla is best known
     for its electric cars. The company is also known for specialising in solar panels
@@ -352,11 +322,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/s
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "Siemens Limited is a technology company focused on industry,
     infrastructure, digital transformation, transport as well as transmission and generation
@@ -383,11 +350,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/e
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "EDF Energy is a British integrated energy company, wholly
     owned by the French state owned EDF (Électricité de France), with operations spanning
@@ -415,11 +379,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/b
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "Boeing is the world's largest aerospace company and leading
     manufacturer of commercial jetliners, defense, space and security systems, and service
@@ -446,11 +407,8 @@ file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/r
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
-    men_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
-    men_mid_senior_level: rand(1..100),
     women_junior_level: rand(1..100),
-    men_junior_level: rand(1..100),
     hq_location: location.sample,
     company_description: "Rolls-Royce is the world's leading supplier of marine
     propulsion equipment. Its products and services range from complete ship design
