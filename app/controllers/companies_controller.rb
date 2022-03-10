@@ -4,6 +4,8 @@ class CompaniesController < ApplicationController
   def index
     if params[:search].present?
       @companies = Company.search_by_company_name(params[:search][:company_name])
+    elsif params[:type_search].present?
+      @companies = Company.search_by_company_name(params[:type_search][:company_type]).capitalize
     else
       @companies = Company.all
     end
@@ -12,7 +14,6 @@ class CompaniesController < ApplicationController
   def show
     @company = Company.find(params[:id])
     @gender_rating = GenderRating.find_by(company_id: @company.id)
-
   end
 
   def new

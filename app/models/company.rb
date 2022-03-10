@@ -1,5 +1,5 @@
 class Company < ApplicationRecord
-  TYPE_OF_COMPANY = %w[science technology engineering math]
+  TYPE_OF_COMPANY = %w[Science Technology Engineering Math]
   COMPANY_SIZE = %w[small medium large]
   belongs_to :user
   has_many :gender_ratings
@@ -14,12 +14,14 @@ class Company < ApplicationRecord
   validates :women_c_level, numericality: { in: (1..100) }
   validates :women_mid_senior_level, numericality: { in: (1..100) }
   validates :women_junior_level, numericality: { in: (1..100) }
+
   include PgSearch::Model
   pg_search_scope :search_by_company_name,
-    against: [ :company_name ],
+    against: [ :company_name, :type_of_company ],
     using: {
       tsearch: { prefix: true }
     }
+
 end
 # Some comment
 # Please work or else
