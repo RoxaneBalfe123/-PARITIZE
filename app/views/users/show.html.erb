@@ -1,19 +1,17 @@
 <div class="container-show">
-  <div class="bookmark-header">
-    <h1>Bookmark Dashboard</h1>
+  <div class="company-header">
+    <h2 class="company-name"> <h1>Bookmark Dashboard</h1>
   </div>
-    <p class="card-profile"><h2>My profile</h2></p>
-      <div class= "profile-info">
-        <p class= "card-profile-name-email card-style">
-          <p class= card-name><%= "Name: #{@user.name}" %></p>
-          <p class= card-email><%= "Email: #{@user.email}" %></p>
-      <div>
-      <div class="card-style companies-bookmarked-wrapper">
-        <p class="companies-bookmarked"><%= "Companies bookmarked: #{@user.bookmarks.count}" %></p>
-      </div>
-      </div>
+    <p class="company-type"><h2>My profile</h2></p>
+    <div class="company-description-score">
+      <p class="company-description card-style"><%= "Name: #{@user.name}" %></p>
+      <p class="company-description card-style"><%= "Email: #{@user.email}" %></p>
+        <div class="card-style company-score-wrapper">
+          <p class="company-score">Companies bookmarked:</p>
+          <p class="company-rating"> <%= "#{@user.bookmarks.count}" %></p>
+        </div>
     </div>
-    <div class="company-bookmark-list card-style">
+    <div class="diversity-scores card-style">
       <% @bookmarks.each do | bookmark | %>
         <p><%= "Company: #{bookmark.company.company_name}" %></p>
         <%= link_to "Delete bookmark", bookmark_path(bookmark), method: :delete %>
