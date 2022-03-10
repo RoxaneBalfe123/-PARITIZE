@@ -7,7 +7,7 @@
   margin-top: 10px;
   position: relative;
   border: 1px solid white;
-  box-shadow: #6FBDA7 0 0 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06)
 }
 .companies_container {
   width: 600px;
@@ -15,7 +15,7 @@
 }
 .company_card_img {
   margin-right: 20px;
-   height: 100px;
+  height: 100px;
   width: 100px;
   object-fit: contain;
   object-position: center;
@@ -24,6 +24,12 @@ a:link {
   text-decoration: none;
   color: black;
 }
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
 
 .company-bookmark-list {
   padding: 16px;
@@ -45,7 +51,7 @@ a:link {
 .rating {
   display: flex;
 }
-.rating-heart {
+.rating-bookmark {
   display: flex;
 }
 
@@ -59,12 +65,12 @@ h4 {
   }
 
 .bookmarked {
-  color: red;
+  color: black;
   margin-left: 20px;
 }
 
 .unbookmarked {
-  color: black;
+  color: gray;
   margin-left: 20px;
 }
 
@@ -81,11 +87,16 @@ h4 {
   box-shadow: $shadow-md;
   transform: scale(1.04);
   transition:0.5s;
-
 }
+
 .card-text{
   height:160px;
 }
+
 .card {
   border-radius: 8px;
+}
+
+h1.company-header {
+  margin-bottom: 25px;
 }

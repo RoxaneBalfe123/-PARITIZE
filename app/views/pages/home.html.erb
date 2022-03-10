@@ -1,10 +1,29 @@
+  <div class="banner">
+      <div>
+        <h1>Gender diversity in focus</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+        <%= simple_form_for :search, url: companies_path, method: "GET", html: { class: 'form-inline', id: 'search-form', data_click_search_target: "form" } do |f| %>
+          <%= f.input :company_name, label: false, input_html: {placeholder:  "Search a company"} %>
+          <%= f.submit "Search", class: "btn btn-flat" %>
+        <% end %>
+      </div>
+      <img class='hero' src="https://res.cloudinary.com/dqpmvek08/image/upload/v1646164525/homepage_ju5r44.jpg">
+    </div>
+    <h1 class="logo-title">Companies we have worked with</h1>
+    <div class="company-grid">
+      <%@companies[0..5].each do |company|%>
+      <%= cl_image_tag company.photo.key %>
+      <%end%>
+  </div>
+
 <div class="banner">
-  <div>
+  <div class="banner-text">
     <h1>Gender diversity in focus</h1>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+
     <%= simple_form_for :search, url: companies_path, method: "GET", html: { class: 'form-inline', id: 'search-form', data_click_search_target: "form" } do |f| %>
-      <%= f.input :company_name, label: false, input_html: {placeholder:  "Search a company"} %>
-      <%= f.submit "Search", class: "btn btn-flat" %>
+      <%= f.input :company_name, label: false, input_html: {placeholder:  "Search a company", class: "w-100"} %>
+      <%= f.submit "Search", class: "btn btn-flat", id: "search-btn" %>
     <% end %>
   </div>
   <img class='hero' src="https://res.cloudinary.com/dqpmvek08/image/upload/v1646164525/homepage_ju5r44.jpg">
@@ -16,7 +35,9 @@
 
 <div class="company-grid">
   <%@companies[0..5].each do |company|%>
+  <div class="company-logo">
     <%= cl_image_tag company.photo.key %>
+    </div>
   <%end%>
 </div>
 
