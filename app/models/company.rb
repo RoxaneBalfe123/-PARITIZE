@@ -22,3 +22,5 @@ class Company < ApplicationRecord
     }
 end
 # Some comment
+# Please work or else
+# We will go to bed crying
