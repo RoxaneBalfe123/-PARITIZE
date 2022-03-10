@@ -5,7 +5,7 @@ class CompaniesController < ApplicationController
     if params[:search].present?
       @companies = Company.search_by_company_name(params[:search][:company_name])
     elsif params[:type_search].present?
-      @companies = Company.search_by_company_name(params[:type_search][:company_type])
+      @companies = Company.search_by_company_name(params[:type_search][:company_type]).capitalize
     else
       @companies = Company.all
     end

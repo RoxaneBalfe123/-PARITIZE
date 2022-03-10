@@ -1,5 +1,5 @@
 class Company < ApplicationRecord
-  TYPE_OF_COMPANY = %w[science technology engineering math]
+  TYPE_OF_COMPANY = %w[Science Technology Engineering Math]
   COMPANY_SIZE = %w[small medium large]
   belongs_to :user
   has_many :gender_ratings
