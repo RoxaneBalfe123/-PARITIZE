@@ -21,3 +21,4 @@ class Company < ApplicationRecord
       tsearch: { prefix: true }
     }
 end
+# Some comment
