@@ -74,6 +74,28 @@ h4 {
   margin-left: 20px;
 }
 
+.resource-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  border: none;
+  flex-grow: 1;
+  margin-left: 80px;
+}
+
+.card:hover{
+  box-shadow: $shadow-md;
+  transform: scale(1.04);
+  transition:0.5s;
+}
+
+.card-text{
+  height:160px;
+}
+
+.card {
+  border-radius: 8px;
+}
 
 h1.company-header {
   margin-bottom: 25px;

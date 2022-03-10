@@ -24,7 +24,6 @@
   font-weight: bold;
 }
 
-}
 .companies-bookmarked-total {
   text-align: center;
 }
@@ -61,5 +60,13 @@
 
 .card-email {
   font-size: 80px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+.flex-item {
+  flex: 0 0 50%;
 }
 }
