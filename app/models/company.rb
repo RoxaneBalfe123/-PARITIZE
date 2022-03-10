@@ -23,3 +23,4 @@ class Company < ApplicationRecord
     }
 
 end
+# Some comment
