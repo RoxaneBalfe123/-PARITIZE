@@ -15,11 +15,12 @@
 
 * {
   margin: 0;
+
+  color: #333333;
 }
 
 body {
   background-image: url(asset_path("wave.svg"));
-  background-size: cover;
-  background-position: 0px -250px;
+  background-size: contain;
   background-repeat: no-repeat;
 }
