@@ -81,6 +81,7 @@ h4 {
   border: none;
   flex-grow: 1;
   margin-left: 80px;
+  border-radius: 8px;
 }
 
 .card:hover{
@@ -95,6 +96,11 @@ h4 {
 
 .card {
   border-radius: 8px;
+}
+
+.card-img, .card-img-top {
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
 }
 
 h1.company-header {
