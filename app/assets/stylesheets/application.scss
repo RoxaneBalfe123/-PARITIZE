@@ -18,7 +18,8 @@
 }
 
 body {
-  background-image: url(<%= asset_path("wave-haikei.png")%>);
+  background-image: url(asset_path("wave.svg"));
   background-size: cover;
   background-position: 0px -250px;
+  background-repeat: no-repeat;
 }

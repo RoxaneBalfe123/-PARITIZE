@@ -1,0 +1,55 @@
+.ratings-grid {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.ratings-card {
+  display: flex;
+  width: 200px;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .circle-green, .circle-red, .circle-orange {
+    width: 100px;
+    height: 100px;
+  }
+
+  h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.ratings-title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.company-details {
+  text-align: center;
+}
+
+.total {
+  margin: 0 auto;
+}
+
+.breakdown {
+  background-color: $light-grey;
+  box-shadow: $shadow-sm;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.heading-2 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.rating-round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

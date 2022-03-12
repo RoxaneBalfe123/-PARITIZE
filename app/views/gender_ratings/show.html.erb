@@ -1,52 +1,86 @@
-<div class="wrapper">
+<div class="container">
   <div class ="company-details">
-  <h1> Gender represenation scores:
-   total, entry level, mid/senior, and to C-level or board positions</h1>
-  <h2> Your total gender rating score: </h2>
+  <h1>Here is your overall diversity score</h1>
+  <div class="total">
   <% if @gender_rating.average_rating >= 50 %>
-    <div class="circle-green"></div>
+    <div class="circle-green rating-round">
+    <%= @gender_rating.average_rating.round(2)%>
+    %
+    </div>
   <% elsif @gender_rating.average_rating <= 29 %>
-    <div class="circle-red"></div>
+    <div class="circle-red rating-round">
+    <%= @gender_rating.average_rating.round(2)%>
+    %
+    </div>
   <% else @gender_rating.average_rating %>
-    <div class="circle-orange"></div>
+    <div class="circle-orange rating-round">
+    <%= @gender_rating.average_rating.round(2)%>
+    %
+    </div>
   <% end %>
+  </div>
+    <div class="breakdown">
+    <p class="ratings-title">Here is a breakdown of your score by level</p>
+  <div class="ratings-grid mt-5 mb-3">
 
-    <h2> C-LEVEL AND BOARD </h2>
-    <h3> Gender score </h3>
+    <div class="ratings-card ">
+    <h2> C-Level and Board </h2>
   <% if @gender_rating.c_rating >= 50 %>
-    <div class="circle-green"></div>
+    <div class="circle-green rating-round">
+    <%= @gender_rating.c_rating%>
+    </div>
   <% elsif @gender_rating.c_rating <= 29 %>
-   <div class="circle-red"></div>
+   <div class="circle-red rating-round">
+   <%= @gender_rating.c_rating%>
+   </div>
   <% else @gender_rating.c_rating %>
-    <div class="circle-orange"></div>
+    <div class="circle-orange rating-round">
+    <%= @gender_rating.c_rating%>
+    </div>
   <% end %>
+  </div>
 
-    <h2> MID AND SENIOR LEVEL </h2>
-    <h3> Gender score </h3>
+    <div class="ratings-card">
+    <h2> Mid and Senior Level </h2>
   <% if @gender_rating.mid_rating >= 50 %>
-    <div class="circle-green"></div>
+    <div class="circle-green rating-round">
+    <%= @gender_rating.mid_rating%>
+    </div>
   <% elsif @gender_rating.mid_rating <= 29 %>
-    <div class="circle-red"></div>
+    <div class="circle-red rating-round">
+    <%= @gender_rating.mid_rating%>
+    </div>
   <% else @gender_rating.mid_rating %>
-    <div class="circle-orange"></div>
+    <div class="circle-orange rating-round">
+    <%= @gender_rating.mid_rating%>
+    </div>
   <% end %>
+  </div>
 
-    <h2>   </h2>
-    <h3> Gender score </h3>
+    <div class="ratings-card">
+    <h2>Junior Level </h2>
   <% if @gender_rating.junior_rating >= 50 %>
-    <div class="circle-green"></div>
+    <div class="circle-green rating-round">
+    <%= @gender_rating.junior_rating%>
+    </div>
   <% elsif @gender_rating.junior_rating <= 29 %>
-    <div class="circle-red"></div>
+    <div class="circle-red rating-round">
+    <%= @gender_rating.junior_rating%>
+    </div>
   <% else @gender_rating.junior_rating %>
-    <div class="circle-orange"></div>
+    <div class="circle-orange rating-round">
+    <%= @gender_rating.junior_rating%>
+    </div>
   <% end %>
+  </div>
 
   </div>
 
-  <h2>Would you like to know how to attract diverse talent to your organisation?</h2>
-  <h3> See resources</h3>
+  </div>
 </div>
-
+</div>
+<div class="heading-2">
+<h2>Here is how you can improve your company rating</h2>
 <div class="main-container mt-5 mb-3">
   <div class="resource-card">
    <div class="card border-light" style="width: 22rem;cursor:pointer" onclick="window.open('https://blog.psionline.com/talent/7-reasons-to-hire-women-leaders', '_blank')">
@@ -69,6 +103,7 @@
         <h5 class="card-title">73 Percent of Companies With Gender-Equality Practices Increased Profitability and Productivity in 2021.</h5>
         <p class="card-text">Gender equality in the workforce is critical to the opportunity, growth and success of all companies. </p>
       </div>
+   </div>
    </div>
   </div>
 </div>
