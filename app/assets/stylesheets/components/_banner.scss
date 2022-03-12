@@ -6,7 +6,6 @@ body {
   width: 86%;
   margin: 0 auto;
   display: flex;
-  align-items: center;
   gap: 24px;
   padding-top: 28px;
   div {
@@ -29,7 +28,8 @@ body {
 
 .banner h1 {
   color: #254554;
-  font-size: 38px;
+  font-size: 64px;
+  text-align: left;
 }
 
 .banner p {
