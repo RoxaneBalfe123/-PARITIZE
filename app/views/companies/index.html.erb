@@ -6,8 +6,8 @@
   <%= f.submit "Search", class: "btn btn-flat companies align-middle" %>
 <% end %>
 
-<div>
-  <p class="women">Womens presence:</p>
+<div class="container-fluid justify-content-center card-presence">
+  <p>Women's presence:</p>
   <div class="circles">
     <p>High</p>
     <%= image_tag("circle_green.png", width: 25, height: 25, class: "circle") %>
@@ -19,7 +19,7 @@
 </div>
 
 
-<% @companies = @companies.sort_by { |company| company.gender_ratings.first.average_rating }.reverse %>
+<% @companies = @companies.sort_by { |company| company.gender_ratings.first.average_rating}.reverse %>
 
 <div class="company-cards">
   <% @companies.each do | company | %>
@@ -46,7 +46,7 @@
           <% else company.gender_ratings.first.average_rating %>
             <div class="circle-rating-red"></div>
           <% end %>
-          <h4><%=company.gender_ratings.first.average_rating %>%</h4>
+          <h4><%=company.gender_ratings.first.average_rating.round(2) %>%</h4>
         </div>
 
         <% if company.bookmarks.find { |bookmark| bookmark.user == current_user} != nil %>
