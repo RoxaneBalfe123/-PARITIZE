@@ -1,6 +1,6 @@
 .navbar-lewagon {
-  justify-content: space-around;
-  background: white;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .navbar-wagon-fixed {
@@ -19,8 +19,17 @@
   width: 40px;
 }
 
+.navbar-right {
+  display: flex;
+}
+
 .btn-light:hover {
   background-color: #6FBDA7;
   color: white;
   border-radius: 4px;
+}
+
+.nav-link:hover {
+  color: $dark-blue;
+  transition: 0.4s ease;
 }
