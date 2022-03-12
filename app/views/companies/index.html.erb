@@ -1,63 +1,65 @@
-<div class="container-companies my-5">
-  <div class="row justify-content-center">
-    <div class="col-12 col-sm-6">
-     <h1 class="company-header justify-content-center">Best rated companies</h1>
-    <%= simple_form_for :type_search, url: companies_path, method: "GET", html: { class: 'form-inline justify-content-center align-middle'} do |f| %>
-      <%= f.input :company_type, label: false, class: "input-field",  prompt:  "Choose sector", collection: Company::TYPE_OF_COMPANY%>
-      <%= f.submit "Search", class: "btn btn-flat companies align-middle" %>
-    <% end %>
 
-  <div class="card-presence justify-content-center m-3">
-    <p class="women">Women's presence:</p>
-    <div class="circles">
-      <p>High</p>
-      <%= image_tag("circle_green.png", width: 25, height: 25, class: "circle")%>
-      <p>Moderate</p>
-      <%= image_tag("circle_ambar.png", width: 25, height: 25, class: "circle")%>
-      <p>Poor</p>
-      <%= image_tag("circle_red.png", width: 25, height: 25, class: "circle")%>
-    </div>
- </div>
-  <% @companies = @companies.sort_by { |company| company.gender_ratings.first.average_rating}.reverse%>
-   <% @companies.each do | company | %>
-     <div class="company_card m-3">
+<h1 class="company-header justify-content-center">Best rated companies</h1>
 
-       <div class="company_card_info">
+<%= simple_form_for :type_search, url: companies_path, method: "GET", html: { class: 'form-inline justify-content-center align-middle'} do |f| %>
+  <%= f.input :company_type, label: false, class: "input-field",  prompt:  "Choose sector", collection: Company::TYPE_OF_COMPANY%>
+  <%= f.submit "Search", class: "btn btn-flat companies align-middle" %>
+<% end %>
+
+<div>
+  <p class="women">Womens presence:</p>
+  <div class="circles">
+    <p>High</p>
+    <%= image_tag("circle_green.png", width: 25, height: 25, class: "circle") %>
+    <p>Moderate</p>
+    <%= image_tag("circle_ambar.png", width: 25, height: 25, class: "circle") %>
+    <p>Poor</p>
+    <%= image_tag("circle_red.png", width: 25, height: 25, class: "circle") %>
+  </div>
+</div>
+
+
+<% @companies = @companies.sort_by { |company| company.gender_ratings.first.average_rating }.reverse %>
+
+<div class="company-cards">
+  <% @companies.each do | company | %>
+
+    <div class="company_card m-3">
+      <div class="company_card_info">
         <% if company.photo.key != nil %>
           <%= link_to company_path(company) do %>
-           <%= cl_image_tag company.photo.key, class: "company_card_img" %>
-         <% end %>
-         <div class="card-details">
-           <h3><%= link_to company.company_name, company_path(company) %></h3>
-           <p><%= company.hq_location %></p>
-         </div>
-       </div>
+            <%= cl_image_tag company.photo.key, class: "company_card_img" %>
+          <% end %>
+        <% end %>
+        <div class="card-details">
+          <h3><%= link_to company.company_name, company_path(company) %></h3>
+          <p><%= company.hq_location %></p>
+        </div>
+      </div>
 
-       <div class="rating-bookmark">
+      <div class="rating-bookmark">
         <div class="rating">
-            <% if company.gender_ratings.first.average_rating >= 50 %>
-              <div class="circle-rating-green"></div>
-            <% elsif company.gender_ratings.first.average_rating <= 29 %>
-              <div class="circle-rating-orange"></div>
-            <% else company.gender_ratings.first.average_rating %>
-              <div class="circle-rating-red"></div>
-            <% end %>
-            <h4><%=company.gender_ratings.first.average_rating %>%</h4>
-          </div>
-          <% if company.bookmarks.find { |bookmark| bookmark.user == current_user} != nil %>
+          <% if company.gender_ratings.first.average_rating >= 50 %>
+            <div class="circle-rating-green"></div>
+          <% elsif company.gender_ratings.first.average_rating <= 29 %>
+            <div class="circle-rating-orange"></div>
+          <% else company.gender_ratings.first.average_rating %>
+            <div class="circle-rating-red"></div>
+          <% end %>
+          <h4><%=company.gender_ratings.first.average_rating %>%</h4>
+        </div>
+
+        <% if company.bookmarks.find { |bookmark| bookmark.user == current_user} != nil %>
           <%= link_to bookmark_path(company.bookmarks.find { |bookmark| bookmark.user == current_user}), method: :delete  do %>
             <i class="fas fa-bookmark bookmarked"></i>
           <% end %>
-          <% else %>
-           <%= link_to company_bookmarks_path(company), method: :POST do%>
+        <% else %>
+          <%= link_to company_bookmarks_path(company), method: :POST do %>
             <i class="fas fa-bookmark unbookmarked"></i>
           <% end %>
-          <% end %>
-       </div>
+        <% end %>
       </div>
-    <% end %>
-  <% end %>
- </div>
-<%# bloody lines of code %>
-</div>
+    </div>
 
+  <% end %>
+</div>

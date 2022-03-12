@@ -113,3 +113,10 @@
 // left: 0;
 // width: 100%;
 //}
+
+.company-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  width: 70%;
+  margin: 0 auto;
+}
