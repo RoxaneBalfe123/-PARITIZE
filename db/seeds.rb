@@ -47,9 +47,9 @@ astra_zeneca.user_id = user.id
 astra_zeneca.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 12.3,
-  mid_rating: 23.0,
-  junior_rating: 21.1,
+  c_rating: 39.7,
+  mid_rating: 46.9,
+  junior_rating: 50,
   average_rating: 40,
   company_id: astra_zeneca.id
 )
@@ -75,10 +75,10 @@ gsk.user_id = user.id
 gsk.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 25,
+  c_rating: 37,
   mid_rating: 30,
-  junior_rating: 28,
-  average_rating: 45,
+  junior_rating: 50,
+  average_rating: 39,
   company_id: gsk.id
 )
 gender_rating.company_id = gsk.id
@@ -104,10 +104,10 @@ bayer.user_id = user.id
 bayer.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 30,
-  mid_rating: 35,
-  junior_rating: 20,
-  average_rating: 50,
+  c_rating: 25,
+  mid_rating: 40,
+  junior_rating: 45,
+  average_rating: 36,
   company_id: bayer.id
 )
 gender_rating.company_id = bayer.id
@@ -133,10 +133,10 @@ merck.user_id = user.id
 merck.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 17,
-  mid_rating: 24,
-  junior_rating: 30,
-  average_rating: 40,
+  c_rating: 22,
+  mid_rating: 35,
+  junior_rating: 40,
+  average_rating: 32,
   company_id: merck.id
 )
 gender_rating.company_id = merck.id
@@ -162,9 +162,9 @@ roche.user_id = user.id
 roche.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 23.7,
-  mid_rating: 37.5,
-  junior_rating: 21,
+  c_rating: 30,
+  mid_rating: 45,
+  junior_rating: 45,
   average_rating: 53,
   company_id: roche.id
 )
@@ -191,10 +191,10 @@ facebook.user_id = user.id
 facebook.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 28,
-  mid_rating: 33,
-  junior_rating: 43,
-  average_rating: 47,
+  c_rating: 20,
+  mid_rating: 35,
+  junior_rating: 44,
+  average_rating: 33,
   company_id: facebook.id
 )
 gender_rating.company_id = facebook.id
@@ -220,10 +220,10 @@ google.user_id = user.id
 google.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 22,
-  mid_rating: 32,
-  junior_rating: 28,
-  average_rating: 46,
+  c_rating: 20,
+  mid_rating: 38,
+  junior_rating: 40,
+  average_rating: 32,
   company_id: google.id
 )
 gender_rating.company_id = google.id
@@ -249,10 +249,10 @@ twitter.user_id = user.id
 twitter.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 28,
-  mid_rating: 39,
-  junior_rating: 29,
-  average_rating: 51,
+  c_rating: 40,
+  mid_rating: 25,
+  junior_rating: 40,
+  average_rating: 38,
   company_id: twitter.id
 )
 gender_rating.company_id = twitter.id
@@ -278,10 +278,10 @@ spacex.user_id = user.id
 spacex.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 20.3,
-  mid_rating: 25.6,
-  junior_rating: 28.9,
-  average_rating: 39,
+  c_rating: 17,
+  mid_rating: 22,
+  junior_rating: 27,
+  average_rating: 21,
   company_id: spacex.id
 )
 gender_rating.company_id = spacex.id
@@ -307,10 +307,10 @@ tesla.user_id = user.id
 tesla.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 25.8,
-  mid_rating: 36,
-  junior_rating: 29,
-  average_rating: 42,
+  c_rating: 16,
+  mid_rating: 22,
+  junior_rating: 27,
+  average_rating: 21,
   company_id: tesla.id
 )
 gender_rating.company_id = tesla.id
@@ -335,10 +335,10 @@ siemens.user_id = user.id
 siemens.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 29,
-  mid_rating: 37,
+  c_rating: 19,
+  mid_rating: 30,
   junior_rating: 30,
-  average_rating: 53,
+  average_rating: 27,
   company_id: siemens.id
 )
 gender_rating.company_id = siemens.id
@@ -364,10 +364,10 @@ edf_energy.user_id = user.id
 edf_energy.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 27,
-  mid_rating: 30,
-  junior_rating: 45,
-  average_rating: 50,
+  c_rating: 16,
+  mid_rating: 26,
+  junior_rating: 30,
+  average_rating: 24,
   company_id: edf_energy.id
 )
 gender_rating.company_id = edf_energy.id
@@ -392,10 +392,10 @@ boeing.user_id = user.id
 boeing.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 22.5,
-  mid_rating: 30.8,
-  junior_rating: 29,
-  average_rating: 44,
+  c_rating: 25,
+  mid_rating: 22,
+  junior_rating: 17,
+  average_rating: 21,
   company_id: boeing.id
 )
 gender_rating.company_id = boeing.id
@@ -420,10 +420,10 @@ rolls_royce.user_id = user.id
 rolls_royce.save!
 
 gender_rating = GenderRating.new(
-  c_rating: 21,
-  mid_rating: 32,
-  junior_rating: 18,
-  average_rating: 35,
+  c_rating: 8,
+  mid_rating: 10,
+  junior_rating: 32,
+  average_rating: 16,
   company_id: rolls_royce.id
 )
 gender_rating.company_id = rolls_royce.id
