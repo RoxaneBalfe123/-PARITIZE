@@ -33,9 +33,24 @@
   }
 }
 
+
+.email-logo {
+  margin: 20px 54px;
+}
+
+
 .company-rating {
   font-size: 80px;
   font-weight: bold;
+}
+
+.fa-company {
+text-align: center;
+}
+.fa:hover {
+  box-shadow: $shadow-md;
+  transform: scale(1.04);
+  transition:0.5s;
 }
 
 .company-score-wrapper {
