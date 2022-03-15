@@ -86,7 +86,7 @@ gender_rating.save!
 
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/bayer_qudgqa.png')
   bayer = Company.new(
-    company_name: "bayer",
+    company_name: "Bayer",
     type_of_company: type.sample,
     company_size: size.sample,
     women_c_level: rand(1..100),
