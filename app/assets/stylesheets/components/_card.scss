@@ -64,15 +64,22 @@ h4 {
     text-decoration: none;
   }
 
-.bookmarked {
+
+
+button {
+border: none;
+background-color: transparent;
+
+  .bookmarked {
   color: black;
   margin-left: 20px;
 }
-
 .unbookmarked {
-  color: gray;
+  color: #aaa;
   margin-left: 20px;
 }
+}
+
 
 .resource-card {
   display: grid;

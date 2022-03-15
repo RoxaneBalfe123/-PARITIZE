@@ -50,11 +50,12 @@
         </div>
 
         <% if company.bookmarks.find { |bookmark| bookmark.user == current_user} != nil %>
-          <%= link_to bookmark_path(company.bookmarks.find { |bookmark| bookmark.user == current_user}), method: :delete  do %>
+          <%= button_to bookmark_path(company.bookmarks.find { |bookmark| bookmark.user == current_user}), method: :delete  do %>
             <i class="fas fa-bookmark bookmarked"></i>
           <% end %>
+
         <% else %>
-          <%= link_to company_bookmarks_path(company), method: :POST do %>
+          <%= button_to(company_bookmarks_path(company.id), method: :post) do %>
             <i class="fas fa-bookmark unbookmarked"></i>
           <% end %>
         <% end %>
