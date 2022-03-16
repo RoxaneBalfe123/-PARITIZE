@@ -32,11 +32,8 @@
       <% end %>
     </div>
   </div>
+  <%= link_to 'About Paritize and The Team',about_path, class: 'btn btn-about mt-3' %>
+  <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn btn-primary-form" %>
 </div>
-<div class="card-about-btn">
-  <br/>
-  <%= link_to 'About Paritize and The Team', class: 'btn btn-about mt-3' %>
-  <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn btn-orange" %>
-</div>
-
+<br>
 <%= image_tag("5272-PhotoRoom.png", class: "img-dashboard") %>
