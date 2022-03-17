@@ -7,9 +7,9 @@
      <%= f.input :company_name, placeholder: "Enter the full name of your company", label: "Company name" %>
      <%= f.input :company_description, placeholder: "Brief description of the company", label: "Description of the company" %>
      <%= f.input :hq_location, placeholder: "Example: London", label: "Location"%>
-     <%= f.input :company_size, label: "Size of the company", collection: [['Small', 'small'], ['Medium', 'medium'], ['Large', 'large']], as: :radio_buttons, wrapper: :vertical_collection_inline %>
+     <%= f.input :company_size, label: "Size of the company (Number of employees)", collection: [['Small (<50)', 'small'], ['Medium (50-250)', 'medium'], ['Large (>250)', 'large']], as: :radio_buttons, wrapper: :vertical_collection_inline %>
      <%= f.input :type_of_company, label: "Type of the company", as: :radio_buttons, collection: [["Science", "science"], ["Technology", "technology"], ["Engineering", "engineering"], ["Math", "math"]], wrapper: :vertical_collection_inline %>
-     <p>What percentage of women are in the below positions in your company?</p>
+     <p style="margin-left: -3px">What percentage of women are in the below positions in your company?</p>
      <div class= "form-levels">
      <%= f.input :women_c_level, label: "C-level", placeholder: "50%" %>
      <%= f.input :women_mid_senior_level, label: "Mid-senior-level",placeholder: "50%" %>

@@ -33,9 +33,36 @@
   }
 }
 
+
+.e-mail-logo {
+  width: 180px;
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4px;
+}
+
+.company-description-bookmark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .company-rating {
   font-size: 80px;
   font-weight: bold;
+}
+
+.fa-company {
+text-align: center;
+}
+.fa:hover {
+  box-shadow: $shadow-md;
+  transform: scale(1.04);
+  transition:0.5s;
 }
 
 .company-score-wrapper {
@@ -51,4 +78,18 @@
 
 .diversity-scores {
   margin-top: 24px;
+}
+
+.buttons-bookmarks {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.cards-bookmarks-show {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 71px;
+  border: none;
+  flex-grow: 1;
 }
