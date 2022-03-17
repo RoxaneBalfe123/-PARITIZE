@@ -30,7 +30,7 @@ user = User.create!(
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/astrazeneca_jxzwhh.png')
   astra_zeneca = Company.new(
     company_name: "AstraZeneca",
-    type_of_company: type.sample,
+    type_of_company: type[0],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
@@ -59,7 +59,7 @@ gender_rating.save!
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/gsk_q6awrt.png')
   gsk = Company.new(
     company_name: "GSK",
-    type_of_company: type.sample,
+    type_of_company: type[0],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
@@ -87,7 +87,7 @@ gender_rating.save!
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/bayer_qudgqa.png')
   bayer = Company.new(
     company_name: "Bayer",
-    type_of_company: type.sample,
+    type_of_company: type[0],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
@@ -116,7 +116,7 @@ gender_rating.save!
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/merck_tbwmyp.png')
   merck = Company.new(
     company_name: "Merck",
-    type_of_company: type.sample,
+    type_of_company: type[0],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
@@ -145,7 +145,7 @@ gender_rating.save!
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/roche_xnrlgh.png')
   roche = Company.new(
     company_name: "Roche",
-    type_of_company: type.sample,
+    type_of_company: type[0],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
@@ -174,7 +174,7 @@ gender_rating.save!
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/facebook_nyiok4.png')
   facebook = Company.new(
     company_name: "Facebook",
-    type_of_company: type.sample,
+    type_of_company: type[1],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
@@ -203,7 +203,7 @@ gender_rating.save!
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/google_rwfzvl.png')
   google = Company.new(
     company_name: "Google",
-    type_of_company: type.sample,
+    type_of_company: type[1],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
@@ -232,7 +232,7 @@ gender_rating.save!
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/twitter_qb63cp.png')
   twitter = Company.new(
     company_name: "Twitter",
-    type_of_company: type.sample,
+    type_of_company: type[1],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
@@ -261,7 +261,7 @@ gender_rating.save!
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/space_x_hbmydy.png')
   spacex = Company.new(
     company_name: "SpaceX",
-    type_of_company: type.sample,
+    type_of_company: type[3],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
@@ -290,7 +290,7 @@ gender_rating.save!
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/tesla_icwlzv.png')
   tesla = Company.new(
     company_name: "Tesla",
-    type_of_company: type.sample,
+    type_of_company: type[3],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
@@ -319,7 +319,7 @@ gender_rating.save!
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/siemens_rleboh.png')
   siemens = Company.new(
     company_name: "Siemens",
-    type_of_company: type.sample,
+    type_of_company: type[3],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
@@ -347,7 +347,7 @@ gender_rating.save!
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/edf_u7rpi8.png')
   edf_energy = Company.new(
     company_name: "Edf_Energy",
-    type_of_company: type.sample,
+    type_of_company: type[3],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
@@ -376,7 +376,7 @@ gender_rating.save!
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731862/boeing_eggbwo.png')
   boeing = Company.new(
     company_name: "Boeing",
-    type_of_company: type.sample,
+    type_of_company: type[3],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
@@ -404,7 +404,7 @@ gender_rating.save!
 file = URI.open('https://res.cloudinary.com/dqpmvek08/image/upload/v1645731863/rolls_royce_i073x2.png')
   rolls_royce = Company.new(
     company_name: "Rolls_royce",
-    type_of_company: type.sample,
+    type_of_company: type[2],
     company_size: size.sample,
     women_c_level: rand(1..100),
     women_mid_senior_level: rand(1..100),
