@@ -4,36 +4,40 @@
   </div>
     <p class="company-type"><h2>My profile</h2></p>
     <div class="company-description-score">
-      <div class="company-description card-style">
+      <div class="company-description-bookmark card-style">
       <p><%= "Name: #{@user.name}" %></p>
-         <%= image_tag("avatar.jpg", class: "avatar-large", alt: "avatar-large")%>
+         <%= image_tag("abstract-492.jpg", class: "avatar-large", alt: "avatar-large")%>
       </div>
-      <div class="company-description card-style">
-      <p><%= "Email: #{@user.email}" %></p>
-      <div class="email-logo">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="60" height="60" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round";>
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-      <polyline points="3 7 12 13 21 7"></polyline>
-      </svg>
-      </div>
-      </div>
-        <div class="card-style company-score-wrapper">
-          <p class="company-score">Companies bookmarked:</p>
-          <p class="company-rating"> <%= "#{@user.bookmarks.count}" %></p>
+        <div class="company-description-bookmark card-style">
+          <p><%= "Email: #{@user.email}" %></p>
+          <%= image_tag("email.png", class: "e-mail-logo", alt: "e-mail")%>
         </div>
+          <div class="company-description-bookmark card-style">
+            <p>Companies bookmarked:</p>
+            <p class="company-rating"> <%= "#{@user.bookmarks.count}" %></p>
+          </div>
     </div>
-    <div class="diversity-scores card-style">
-      <% @bookmarks.each do | bookmark | %>
-        <p class="p-company"><%="Company: #{bookmark.company.company_name}"%></p>
-        <%= link_to bookmark_path(bookmark), method: :delete do %>
-         <i class="fa fa-trash fa-lg;fa-company"aria-hidden="true"></i>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-  <%= link_to 'About Paritize and The Team',about_path, class: 'btn btn-about mt-3' %>
-  <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn btn-primary-form" %>
+
+      <div class="main-container">
+        <div class="cards-bookmarks-show card-style mt-3 mb-3">
+              <% if @user.bookmarks.empty? %>
+              <p>You have no Bookmarks yet</p>
+              <% end %>
+              <% @bookmarks.each do | bookmark | %>
+              <div class="cards">
+              <p class="p-company"><%="Company: #{bookmark.company.company_name}"%></p>
+              <%= cl_image_tag bookmark.company.photo.key, class: "company_card_img" %>
+              <%= link_to bookmark_path(bookmark), method: :delete do %>
+              <i class="fa fa-trash fa-lg;fa-company"aria-hidden="true"></i>
+              <% end %>
+               </div>
+              <% end %>
+        </div>
+      </div>
+        <div class="container-fluid justify-content-center card-presence" style= margin-left: -7px">
+          <%= link_to 'About Paritize and The Team',about_path, class: "btn btn-about" %>
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn btn-primary-form" %>
+        </div>
 </div>
 <br>
 <%= image_tag("5272-PhotoRoom.png", class: "img-dashboard") %>

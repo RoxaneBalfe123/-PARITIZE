@@ -15,6 +15,6 @@ class BookmarksController < ApplicationController
   def destroy
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
-    redirect_to companies_path
+    redirect_to dashboard_path, notice: "Bookmark was successfully deleted"
   end
 end

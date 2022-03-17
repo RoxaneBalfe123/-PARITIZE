@@ -34,8 +34,20 @@
 }
 
 
-.email-logo {
-  margin: 20px 54px;
+.e-mail-logo {
+  width: 180px;
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4px;
+}
+
+.company-description-bookmark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -66,4 +78,18 @@ text-align: center;
 
 .diversity-scores {
   margin-top: 24px;
+}
+
+.buttons-bookmarks {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.cards-bookmarks-show {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 71px;
+  border: none;
+  flex-grow: 1;
 }
