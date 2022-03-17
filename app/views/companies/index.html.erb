@@ -2,7 +2,7 @@
 <h1 class="company-header justify-content-center">Best rated companies</h1>
 
 <%= simple_form_for :type_search, url: companies_path, method: "GET", html: { class: 'form-inline justify-content-center align-middle'} do |f| %>
-  <%= f.input :company_type, label: false, class: "input-field",  prompt:  "Choose sector", collection: Company::TYPE_OF_COMPANY%>
+  <%= f.input :company_type, label: false, input_html: { class: "recognitionStyling" },  prompt:  "Choose sector", collection: Company::TYPE_OF_COMPANY %>
   <%= f.submit "Search", class: "btn btn-flat companies align-middle" %>
 <% end %>
 
