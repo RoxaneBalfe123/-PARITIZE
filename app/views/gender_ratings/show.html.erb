@@ -3,19 +3,16 @@
   <h1>Here is your overall diversity score</h1>
   <div class="total">
   <% if @gender_rating.average_rating >= 50 %>
-    <div class="circle-green rating-round sub-company-rating">
-    <%= @gender_rating.average_rating.round(2)%>
-    %
+    <div class="circle-green rating-round company-rating">
+    <%= @gender_rating.average_rating.round(2)%>%
     </div>
   <% elsif @gender_rating.average_rating <= 29 %>
-    <div class="circle-red rating-round sub-company-rating">
-    <%= @gender_rating.average_rating.round(2)%>
-    %
+    <div class="circle-red rating-round company-rating">
+    <%= @gender_rating.average_rating.round(2)%>%
     </div>
   <% else @gender_rating.average_rating %>
-    <div class="circle-orange rating-round sub-company-rating">
-    <%= @gender_rating.average_rating.round(2)%>
-    %
+    <div class="circle-orange rating-round company-rating">
+    <%= @gender_rating.average_rating.round(2)%>%
     </div>
   <% end %>
   </div>
@@ -27,15 +24,15 @@
     <h2> C-Level and Board </h2>
   <% if @gender_rating.c_rating >= 50 %>
     <div class="circle-green rating-round sub-company-rating">
-    <%= @gender_rating.c_rating%>
+    <%= @gender_rating.c_rating%>%
     </div>
   <% elsif @gender_rating.c_rating <= 29 %>
    <div class="circle-red rating-round sub-company-rating">
-   <%= @gender_rating.c_rating%>
+   <%= @gender_rating.c_rating%>%
    </div>
   <% else @gender_rating.c_rating %>
     <div class="circle-orange rating-round sub-company-rating">
-    <%= @gender_rating.c_rating%>
+    <%= @gender_rating.c_rating%>%
     </div>
   <% end %>
   </div>
@@ -44,32 +41,32 @@
     <h2> Mid and Senior Level </h2>
   <% if @gender_rating.mid_rating >= 50 %>
     <div class="circle-green rating-round sub-company-rating">
-    <%= @gender_rating.mid_rating%>
+    <%= @gender_rating.mid_rating%>%
     </div>
   <% elsif @gender_rating.mid_rating <= 29 %>
     <div class="circle-red rating-round sub-company-rating">
-    <%= @gender_rating.mid_rating%>
+    <%= @gender_rating.mid_rating%>%
     </div>
   <% else @gender_rating.mid_rating %>
     <div class="circle-orange rating-round sub-company-rating">
-    <%= @gender_rating.mid_rating%>
+    <%= @gender_rating.mid_rating%>%
     </div>
   <% end %>
   </div>
 
     <div class="ratings-card">
-    <h2>Junior Level </h2>
+    <h2>Junior and Entry Level </h2>
   <% if @gender_rating.junior_rating >= 50 %>
     <div class="circle-green rating-round sub-company-rating">
-    <%= @gender_rating.junior_rating%>
+    <%= @gender_rating.junior_rating%>%
     </div>
   <% elsif @gender_rating.junior_rating <= 29 %>
     <div class="circle-red rating-round sub-company-rating">
-    <%= @gender_rating.junior_rating%>
+    <%= @gender_rating.junior_rating%>%
     </div>
   <% else @gender_rating.junior_rating %>
     <div class="circle-orange rating-round sub-company-rating">
-    <%= @gender_rating.junior_rating%>
+    <%= @gender_rating.junior_rating%>%
     </div>
   <% end %>
   </div>
