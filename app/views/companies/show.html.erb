@@ -11,15 +11,21 @@
         <p class="company-score">Total gender rating score:</p>
             <% if @gender_rating.average_rating >= 50 %>
               <div class="circle-green rating-round">
-                <%= @gender_rating.average_rating.round(2)%>%
+                <div class="company-rating">
+                  <%= @gender_rating.average_rating.round(2)%>%
+                </div>
               </div>
             <% elsif @gender_rating.average_rating <= 29 %>
               <div class="circle-red rating-round">
-                <%= @gender_rating.average_rating.round(2)%>%
+                <div class="company-rating">
+                  <%= @gender_rating.average_rating.round(2)%>%
+                </div>
               </div>
             <% else @gender_rating.average_rating %>
               <div class="circle-orange rating-round">
-                <%= @gender_rating.average_rating.round(2)%>%
+                <div class="company-rating">
+                  <%= @gender_rating.average_rating.round(2)%>%
+                </div>
               </div>
             <% end %>
       </div>
@@ -29,16 +35,22 @@
         <p>C-level: <%= @gender_rating.c_rating %>%</p>
         <% if @gender_rating.c_rating >= 50 %>
           <div class="circle-green rating-round">
-            <%= @gender_rating.c_rating.round(2)%>%
+            <div class="sub-company-rating">
+              <%= @gender_rating.c_rating.round(2)%>%
+            </div>
           </div>
         <% elsif @gender_rating.c_rating <= 29 %>
           <div class="circle-red rating-round">
-            <%= @gender_rating.c_rating.round(2)%>%
+            <div class="sub-company-rating">
+              <%= @gender_rating.c_rating.round(2)%>%
+            </div>
           </div>
         <% else @gender_rating.c_rating %>
           <div class="circle-orange rating-round">
-            <%= @gender_rating.c_rating.round(2)%>%
-          </div>
+            <div class="sub-company-rating">
+              <%= @gender_rating.c_rating.round(2)%>%
+            </div>
+          </>
         <% end %>
     </div>
 
